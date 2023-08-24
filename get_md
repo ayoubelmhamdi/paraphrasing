@@ -19,6 +19,10 @@ for file in "${mdbook[@]}";do
   git add "./src/$file"
 done
 
-git commit -m 'init' src/ && git push
+if git status -s | awk '{print $1}' | grep A; then
+  git commit -m 'init' src/ && git push
+else
+  echo "no file to commit/push"
+fi
 
 
