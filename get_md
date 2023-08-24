@@ -1,0 +1,24 @@
+#!/bin/bash
+# shellcheck disable=2038,2002,2129
+
+
+paraphrasingPATH="/data/projects/py/pdfgpt/src"
+len=38
+
+readarray -t mdbook < <( \
+  diff -q --recursive "$paraphrasingPATH" ./src |
+  grep '\.md$'|
+  grep "$paraphrasingPATH:" |
+  sed -E 's#^.{'$len'}##' )
+
+for file in "${mdbook[@]}";do
+  mv "$paraphrasingPATH/$file" ./src
+
+  echo "- [${file%.md}](./$file)" >> ./src/SUMMARY.md
+  echo "- [${file%.md}](./$file)" >> ./src/README.md
+  git add "./src/$file"
+done
+
+git commit -m 'init' src/ && git push
+
+
