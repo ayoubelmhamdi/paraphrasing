@@ -1,5 +1,5 @@
 # PARAPHRASING SOME USEFULL PDFs
-=================================
+---------------------------------
 
 This simplify use Chatgpt3.5
 
