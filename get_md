@@ -4,14 +4,16 @@
 
 paraphrasingPATH="/data/projects/py/pdfgpt/src"
 len=38
-
+Exclude="p1.md|39.md|40.md|41.md|44.md|p4.md"
 readarray -t mdbook < <( \
   diff -q --recursive "$paraphrasingPATH" ./src |
   grep '\.md$'|
   grep "$paraphrasingPATH:" |
+  grep -vE "$Exclude" |
   sed -E 's#^.{'$len'}##' )
 
 for file in "${mdbook[@]}";do
+  echo "$file"
   mv "$paraphrasingPATH/$file" ./src
 
   echo "- [${file%.md}](./$file)" >> ./src/SUMMARY.md
