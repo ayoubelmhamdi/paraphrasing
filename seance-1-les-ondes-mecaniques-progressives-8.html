@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>seance-1-les-ondes-mecaniques-progressives-8 - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="lung1.html"><strong aria-hidden="true">2.</strong> Learning Efficient, Explainable and Discriminative Representations for Pulmonary Nodules Classification</a></li><li class="chapter-item expanded "><a href="p1.html"><strong aria-hidden="true">3.</strong> p1</a></li><li class="chapter-item expanded "><a href="p2.html"><strong aria-hidden="true">4.</strong> p2</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">5.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html" class="active"><strong aria-hidden="true">6.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/seance-1-les-ondes-mecaniques-progressives-8.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="---------garbage-text--------"><a class="header" href="#---------garbage-text--------">-------- GARBAGE TEXT -------</a></h1>
+<p>@ AlloSchool</p>
+<p>Physique et Chimie : 2eme Année Bac</p>
+<p>Séance 1 (Les ondes mécaniques progressives)
+Professeur : Mr El GOUFIFA Jihad</p>
+<p>Sommaire
+I- Définitions
+1-1/ Onde mécanique
+1-2/ Milieu matériel élastique
+Il- Types d’ondes
+2-1/ Onde transversale
+2-2/ Onde longitudinale
+Il- L’onde mécanique progressive
+IV- L’onde sonore
+V- Propriétés des ondes mécaniques
+5-1/ Dimension d’onde
+5-2/ Superposition d’ondes
+VI- Vitesse de propagation d’une onde
+6-1/ Définition
+6-2/ Facteurs influengant la célérité de propagation
+VI- Notion de retard
+VIII- Exercices
+8-1/ Exercice 1
+8-2/ Exercice 2
+8-3/ Exercice 3
+8-4/ Exercice 4</p>
+<p>I- Définitions
+1-1/ Onde mécanique</p>
+<p>C’est le phénoméne de propagation d’une perturbation dans un milieu matériel sans transport de la</p>
+<p>matiére, mais avec le transport de l’énergie.</p>
+<p>1-2/ Milieu matériel élastique
+</p>
+<p>(compressible et expansible) S’il est capable de reprendre sa forme initiale aprés avoir subit le passage</p>
+<p>d’une onde.</p>
+<p>II- Types d’ondes</p>
+<p>2-1/ Onde transversale</p>
+<p>Une onde est dite transversale si la direction de la perturbation du milieu est perpendiculaire a la</p>
+<p>direction de propagation d’onde.</p>
+<p>La source
+point de départ de l'onde M
+s f*%</p>
+<p>Sens de la déformation</p>
+<p>Exemple</p>
+<p>L’onde le long d’une corde ou a la surface de l’eau.</p>
+<p>2-2/ Onde longitudinale
+Une onde est dite longitudinale si la direction de la perturbation du milieu est alignée avec la direction</p>
+<p>de la propagation de l’onde.</p>
+<p>Exemple</p>
+<p>L’onde le long d’un ressort ou l’onde sonore.</p>
+<p>Ill- L’onde mécanique progressive</p>
+<p>L’onde mécanique progressive est une succession entretenue des signaux mécaniques qui se propagent</p>
+<p>dans un milieu supposé infini.</p>
+<p>Nous pouvons générer une onde mécanique progressive par la vibration entretenue d’une source.</p>
+<p>Exemple</p>
+<p>En faisant tomber l'eau successivement a la surface libre d'une eau, goutte par goutte, a l'aide d'un</p>
+<p>robinet on obtient une onde mécanique progressive.</p>
+<p>IV- L’onde sonore
+4-1/ Expériences</p>
+<p>Exp 1: on allume le téléphone, puis on vide
+la cloche de |’air par une pompe.</p>
+<p>telephone
+portable</p>
+<p>») Pompe a vide</p>
+<p>4-2/ Observations</p>
+<p>Expérience 1</p>
+<p>Exp 2: on frappe le diapason.</p>
+<p>pondule simple
+Diapason 50
+0
+boite sonore</p>
+<p>On observe l’absence de son Aprés le vidage de l’air, on conclut que le son ne se propage pas dans le</p>
+<p>vide mais il nécessite un milieu matériel pour se propager.</p>
+<p>Expérience 2
+</p>
+<p>Lorsqu’on frappe le diapason, la balle se déplace horizontalement, ce qui indique que la direction de</p>
+<p>perturbation et celle de propagation sont alignées, donc le son est une onde longitudinale.</p>
+<p>4-3/ Conclusion</p>
+<p>Le son est une onde mécanique progressive longitudinale se propage dans les milicux matériels (solide
+et liquide et gaz) et ne se propage pas dans le vide, et il se propage grace 4 une compression et une</p>
+<p>dilatation du milieu de propagation.</p>
+<p>Compression Dilatation
+—&lt;+- + &gt;</p>
+<p>V- Propriétés des ondes mécaniques</p>
+<p>5-1/ Dimension d’onde</p>
+<p>Une onde mécanique se propage a partir de la source dans toutes les directions qui lui sont offertes :</p>
+<p>e L’onde a une dimension : se propage selon un axe depuis sa source, a titre d’exemple le ressort.</p>
+<p>e L’onde a deux dimensions : se propage selon deux axes depuis sa source, comme l’onde 4 la surface
+de Veau.</p>
+<p>¢ L’onde a trois dimensions : se propage selon trois axes (L’espace (x, y, z)) depuis sa source, par</p>
+<p>exemple l’onde sonore.</p>
+<p>5-2/ Superposition d’ondes
+Lorsque plusieurs ondes de propagent dans la méme région, elles se propagent en conservant leur</p>
+<p>intégrité, c-a-d leurs amplitudes s’ajoutent algébriquement, puis elles s’éloignent sans étre altérées.</p>
+<p>RENCONTRE DE DEUX PERTURBATIONS</p>
+<p>VI- Vitesse de propagation d’une onde
+6-1/ Définition</p>
+<p>La vitesse de propagation d'une onde (nommée célérité) est égale a la distance parcourue au temps mis</p>
+<p>a la parcourir.</p>
+<p>Elle est donné par la relation suivante :|V = a</p>
+<p>V est la célérité de l’onde (m/s)
+d cst la distance parcourue (m)</p>
+<p>At est la durée du parcours (s)
+</p>
+<p>6-2/ Facteurs influengant la célérité de propagation</p>
+<p>Pour un milieu homogéne, la célérité d’une onde est constante et indépendante de la forme de la
+perturbation. Tandis qu’elle dépend de la nature du milieu : son élasticité, son inertie et de sa
+température.</p>
+<p>Influence de l’élasticité du milieu</p>
+<p>La célérité d’une onde augmente avec l’élasticité du milieu de propagation.</p>
+<p>Exemple: La célérité d’une onde le long d’une corde augmente avec |’augmentation de sa tension.
+Influence de l’inertie du milieu</p>
+<p>L’inertie d’un milieu ou d’un systéme représente la résistance que ce milieu ou ce systéme oppose</p>
+<p>lorsqu’on cherche a le mettre en mouvement.</p>
+<p>La célérité d’une onde dans un milieu dépend de son inertie. Plus l’inertie du milieu est grande et plus</p>
+<p>la célérité de onde se propageant dans ce milieu est faible.</p>
+<p>Par exemple, l’inertie d’une corde est représentée par sa masse linéique (masse par unité de longueur).</p>
+<p>La célérité d’une onde le long d’une corde est donnée par: |V = Va</p>
+<p>ou F est la tension de la corde et sa masse linéique.</p>
+<p>Pour V’onde sonore, la célérité augmente avec la densité du milieu de propagation:
+Vegaz &lt; Viiquide &lt; Vsolide</p>
+<p>Milieu de propagation L’eau L’acier</p>
+<p>| Célérité du son (m.s”) 340 1500 5940</p>
+<p>Pour les gaz, la célérité du son augmente avec la température du milieu.</p>
+<p>VIL Notion de retard</p>
+<p>Au cours de la propagation d’une onde mécanique non amortie, tous les points du milieu de</p>
+<p>propagation subissent la méme perturbation que la source S mais avec un retard |Ty; = SM tel que:</p>
+<p>En général : Le retard d’un point M' par rapport un point M est donné par: |r = =—</p>
+<p>La relation entre l’élongation d'un point M du milieu de propagation et celle de la source est :
+SM
+Vv</p>
+<p>ym (t) = ys (t — T)} avec : |r =</p>
+<p>VIIL Exercices
+8-1/ Exercice 1</p>
+<p>La figure ci-dessous représente la propagation d’une onde le long d’une corde élastique (AB), sa</p>
+<p>longueur AB=10m 4 deux instants t; = 0,1 s et t2 = 0,25</p>
+<ol>
+<li>Est ce que la perturbation conserve sa forme lors de la propagation ?
+</li>
+</ol>
+<p>Cette onde est-elle longitudinale ou transversale ? Justifier.
+Calculer v la célérité de la propagation de l’onde le long de la corde.</p>
+<p>Déterminer la durée At de la perturbation d’un point de la corde.</p>
+<p>oP WN</p>
+<p>Dessiner |’aspect de la corde a l’instant ts = 0,6 s</p>
+<p>VIIL- Exercices
+8-2/ Exercice 2</p>
+<p>La figure ci-dessous représente la propagation d'une onde le long d’une corde :</p>
+<p>Elle représente l’aspect de la corde 4 Vinstant t = 40ms.</p>
+<p>Sachant que la déformation commence 4 partir d’une source a l’instant to = 0 :</p>
+<p>Définir une onde mécanique progressive.</p>
+<ol start="2">
+<li>Quelle est la nature de de l’onde ? quelle est sa dimension ?</li>
+</ol>
+<p>w</p>
+<p>Déterminer 4 instant t les points qui se dirigeront vers le bas ainsi que ceux se dirigeront vers le
+haut.</p>
+<p>Calculer v la célérité de la propagation de l’onde le long de la corde.</p>
+<p>A quel instant s’arréte le point M (position du début de la propagation) ?</p>
+<p>Représenter graphiquement l’aspect de la corde a l’instant t? = 10ms.</p>
+<p>NO oS</p>
+<p>Déterminer parmi les propositions suivantes la / les relation (s) entre l’élongation du point M et</p>
+<p>celle de la source S :</p>
+<p>ys (t) = ym (t + 0, 04)
+ys (t) = ym (t — 0,04)
+ym (t) = ys (t + 0,04)
+ym (t) = ys (t — 0, 04)</p>
+<p>VIIIL- Exercices
+8-3/ Exercice 3</p>
+<p>Pour mesurer la propagation des ondes sonores dans l’air on réalise le montage expérimental ci-dessous
+</p>
+<p>La</p>
+<p>distance entre les deux microphones Ri et R2 est d=1,70 m . La courbe ci-dessous représente la</p>
+<p>variation de la tension aux bornes de chaque microphone.</p>
+<p>Donnée :</p>
+<p>e La sensibilité horizontale : 1 ™/aiv</p>
+<p>e Température d’air : 25°</p>
+<p>© Célérité de la propagation du son dans l’eau vean = 1500m, s—</p>
+<p>eFwnr</p>
+<p>1</p>
+<p>Est que le son est une onde longitudinale ou transversale ?</p>
+<p>Déterminer la valeur du retard temporel entre les microphones Ri et Re.</p>
+<p>Déduire la valeur de vair la célérité de la propagation des ondes sonores dans I’air.</p>
+<p>Déterminer la valeur du retard temporel 7’ quand on déplace le microphone vers la droite 4 partir
+de sa position initiale de L = 51cm</p>
+<p>Comparer Vair Ct Veau. Que peut-t-on déduire ?</p>
+<p>VII- Exercices</p>
+<p>8-</p>
+<p>4/ Exercice 4</p>
+<p>La relation v = ,/ - donne la vitesse de propagation d’un signal transversal le long d’une corde tendue,</p>
+<p>dont T est la tension de la corde et sa masse linéaire.</p>
+<ol>
+<li></li>
+</ol>
+<p>Calculer la vitesse de propagation d’un signal le long d’une corde de longueur L = 10m et de
+masse m = 1kg si sa tension est T = 2,5N.
+Quelle est la durée que met le signal pour parcourir la corde toute entiére ?</p>
+<p>Comment cette vitesse change si nous utilisons la méme corde attachée avec une force de 4 fois la</p>
+<p>force précédente.</p>
+<ol start="4">
+<li>Nous tendons la corde par une masse marquée :</li>
+</ol>
+<p>N</p>
+<p>€=10m
+La corde —
+La poulie”’</p>
+<p>Masse marquée</p>
+<p>® Calculer v la célérité de la propagation de l’onde le long de la corde.</p>
+<p>ous considérons que les dimensions de la poulie sont négligées et g = 10 N/xg
+</p>
+<h1 id="---------paraphrassing-text--------"><a class="header" href="#---------paraphrassing-text--------">-------- PARAPHRASSING TEXT -------</a></h1>
+<h1 id="physique-et-chimie--2ème-année-bac---les-ondes-mécaniques-progressives"><a class="header" href="#physique-et-chimie--2ème-année-bac---les-ondes-mécaniques-progressives">Physique et Chimie : 2ème Année Bac - Les ondes mécaniques progressives</a></h1>
+<h2 id="i--définitions"><a class="header" href="#i--définitions">I- Définitions</a></h2>
+<p>1-1/ Onde mécanique<br />
+Une onde mécanique est un phénomène où une perturbation se propage dans un milieu matériel sans transporter de matière, mais en transportant de l'énergie.<br />
+1-2/ Milieu matériel élastique<br />
+Un milieu matériel élastique est capable de retrouver sa forme initiale après avoir subi le passage d'une onde.</p>
+<h2 id="ii--types-dondes"><a class="header" href="#ii--types-dondes">II- Types d'ondes</a></h2>
+<h3 id="2-1-onde-transversale"><a class="header" href="#2-1-onde-transversale">2-1/ Onde transversale</a></h3>
+<p>Une onde est transversale lorsque la perturbation du milieu est perpendiculaire à la direction de propagation de l'onde. Par exemple, une onde le long d'une corde ou à la surface de l'eau.</p>
+<h3 id="2-2-onde-longitudinale"><a class="header" href="#2-2-onde-longitudinale">2-2/ Onde longitudinale</a></h3>
+<p>Une onde est longitudinale lorsque la perturbation du milieu est alignée avec la direction de propagation de l'onde. Par exemple, une onde le long d'un ressort ou une onde sonore.</p>
+<h2 id="iii--londe-mécanique-progressive"><a class="header" href="#iii--londe-mécanique-progressive">III- L'onde mécanique progressive</a></h2>
+<p>Une onde mécanique progressive est une succession de signaux mécaniques qui se propagent dans un milieu supposé infini. Elle peut être générée par la vibration d'une source, comme des gouttes d'eau tombant à la surface d'un étang.</p>
+<h2 id="iv--londe-sonore"><a class="header" href="#iv--londe-sonore">IV- L'onde sonore</a></h2>
+<p>Une onde sonore est une onde mécanique progressive longitudinale qui se propage dans les milieux matériels (solide, liquide et gaz) mais pas dans le vide. Elle se propage grâce à la compression et la dilatation du milieu de propagation.</p>
+<h2 id="v--propriétés-des-ondes-mécaniques"><a class="header" href="#v--propriétés-des-ondes-mécaniques">V- Propriétés des ondes mécaniques</a></h2>
+<p>5-1/ Dimension d'onde<br />
+Une onde mécanique peut avoir une, deux ou trois dimensions selon la façon dont elle se propage. Par exemple, une onde le long d'une corde a une dimension, une onde à la surface de l'eau a deux dimensions, et une onde sonore a trois dimensions.</p>
+<p>5-2/ Superposition d'ondes<br />
+Lorsque plusieurs ondes se propagent dans la même région, elles conservent leur intégrité et s'éloignent sans être altérées. Leurs amplitudes s'ajoutent algébriquement.</p>
+<h2 id="vi--vitesse-de-propagation-dune-onde"><a class="header" href="#vi--vitesse-de-propagation-dune-onde">VI- Vitesse de propagation d'une onde</a></h2>
+<p>6-1/ Définition<br />
+La vitesse de propagation d'une onde (appelée célérité) est égale à la distance parcourue divisée par le temps mis pour la parcourir. Elle peut être calculée en utilisant la formule V = d/t.</p>
+<p>6-2/ Facteurs influençant la célérité de propagation<br />
+La célérité d'une onde dépend de la nature du milieu de propagation. Elle augmente avec l'élasticité du milieu et diminue avec son inertie. Pour une onde sonore, la célérité augmente avec la densité du milieu et la température.</p>
+<h2 id="vii--notion-de-retard"><a class="header" href="#vii--notion-de-retard">VII- Notion de retard</a></h2>
+<p>Lors de la propagation d'une onde mécanique, tous les points du milieu de propagation subissent la même perturbation que la source, mais avec un retard. Le retard d'un point par rapport à un autre est donné par la distance entre les deux points divisée par la célérité de l'onde.</p>
+<h2 id="viii--exercices"><a class="header" href="#viii--exercices">VIII- Exercices</a></h2>
+<p>8-1/ Exercice 1<br />
+Dans cet exercice, une onde transversale se propage le long d'une corde élastique. On peut déterminer sa célérité en calculant la distance parcourue divisée par le temps mis pour la parcourir. On peut également mesurer la durée de la perturbation d'un point de la corde en observant la figure. Pour dessiner l'aspect de la corde à un instant précis, il faudrait avoir plus d'informations sur la forme de l'onde à cet instant.</p>
+<p>Exercice 4<br />
+Cet exercice concerne la propagation des ondes sonores dans l'air. On peut déterminer si le son est une onde longitudinale ou transversale en observant la variation de la tension aux bornes des microphones. Le retard temporel entre les microphones peut être calculé en utilisant la distance entre eux et la célérité de propagation du son dans l'air. On peut également comparer la célérité de propagation du son dans l'air avec celle dans l'eau pour en déduire des informations. </p>
+<p>Exercice 4 : Vitesse de propagation d'un signal le long d'une corde</p>
+<p>La vitesse de propagation d'un signal transversal le long d'une corde tendue peut être calculée à l'aide de la formule v = √(T/µ), où v est la vitesse, T est la tension de la corde et µ est sa masse linéaire.</p>
+<ol>
+<li>
+<p>Pour calculer la vitesse de propagation d'un signal le long d'une corde de longueur L = 10 m et de masse m = 1 kg, avec une tension T = 2,5 N, nous utilisons la formule v = √(T/µ). En substituant les valeurs, nous obtenons v = √(2,5/1) = √2,5 ≈ 1,58 m/s. La durée que met le signal pour parcourir la corde entière est donnée par la formule t = L/v, où t est la durée et L est la longueur de la corde. En substituant les valeurs, nous obtenons t = 10/1,58 ≈ 6,33 s.</p>
+</li>
+<li>
+<p>Si nous utilisons la même corde attachée avec une force 4 fois supérieure à la force précédente, la tension T sera multipliée par 4. En utilisant la formule v = √(T/µ), nous pouvons calculer la nouvelle vitesse de propagation. En substituant les valeurs, nous obtenons v = √((4*2,5)/1) = √10 ≈ 3,16 m/s. Ainsi, la vitesse de propagation du signal sera plus élevée.</p>
+</li>
+<li>
+<p>Si nous tendons la corde avec une masse marquée de 10 kg, nous devons d'abord convertir cette masse en tension en utilisant la formule T = m<em>g, où T est la tension, m est la masse et g est l'accélération due à la gravité. En substituant les valeurs, nous obtenons T = 10</em>10 = 100 N. En utilisant la formule v = √(T/µ), nous pouvons calculer la célérité de la propagation de l'onde le long de la corde. En substituant les valeurs, nous obtenons v = √(100/1) = √100 = 10 m/s. Ainsi, la célérité de l'onde sera de 10 m/s. </p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="2207.14238.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="2207.14238.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>
