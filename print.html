@@ -100,7 +100,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="lung1.html"><strong aria-hidden="true">2.</strong> Learning Efficient, Explainable and Discriminative Representations for Pulmonary Nodules Classification</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">3.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">4.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">5.</strong> 2308.14963</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="lung1.html"><strong aria-hidden="true">2.</strong> Learning Efficient, Explainable and Discriminative Representations for Pulmonary Nodules Classification</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">3.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">4.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">5.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="s3-tabi-c.html"><strong aria-hidden="true">6.</strong> s3-tabi-c</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -195,6 +195,7 @@
 <li><a href="./seance-1-les-ondes-mecaniques-progressives-8.html">seance-1-les-ondes-mecaniques-progressives-8</a></li>
 <li><a href="./2207.14238.html">2207.14238</a></li>
 <li><a href="./2308.14963.html">2308.14963</a></li>
+<li><a href="./s3-tabi-c.html">s3-tabi-c</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <p>Title: Automated Lung Nodule Detection and Classification Using Deep Learning</p>
@@ -442,6 +443,67 @@ Vector search capabilities have become important in text search platforms like E
 This text discusses two research papers related to vector search using OpenAI embeddings. The first paper, titled &quot;Vector Search with OpenAI Embeddings: Lucene Is All You Need,&quot; was written by Lee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett, Junaid Ahmed, and Arnold Overwijk in 2021. It was presented at the 9th International Conference on Learning Representations (ICLR 2021).</li>
 </ul>
 <p>The second paper, titled &quot;Anserini: Reproducible Ranking Baselines Using Lucene,&quot; was written by Peilin Yang, Hui Fang, and Jimmy Lin in 2018. It was published in the Journal of Data and Information Quality, Volume 10, Issue 4, and spans Article 16.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="classification-of-radiological-zones"><a class="header" href="#classification-of-radiological-zones">Classification of Radiological Zones</a></h1>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p>Radiological zoning is a way to visualize the danger of exposure to ionizing radiation that workers may face. It is based on recommendations, limits, and criteria set by the International Commission on Radiological Protection (ICRP).</p>
+<h2 id="icrp-recommendations"><a class="header" href="#icrp-recommendations">ICRP Recommendations</a></h2>
+<p>The ICRP emphasizes the implementation of its recommendations, which include:</p>
+<ul>
+<li>Justifying all exposures to radiation</li>
+<li>Avoiding unnecessary exposures</li>
+<li>Keeping doses as low as reasonably achievable (ALARA)</li>
+<li>Respecting annual equivalent dose limits</li>
+<li>Applying optimization principles in all work areas</li>
+</ul>
+<h2 id="dose-limits-set-by-icrp"><a class="header" href="#dose-limits-set-by-icrp">Dose Limits set by ICRP</a></h2>
+<p>For exposed workers:</p>
+<ul>
+<li>Average of 20 mSv over 5 consecutive years</li>
+<li>Maximum of 50 mSv in any given year</li>
+<li>Maximum of 20 mSv for the lens of the eye</li>
+<li>Maximum of 500 mSv for the skin and extremities
+For the general public:</li>
+<li>Maximum of 1 mSv in a year for the whole body</li>
+</ul>
+<h2 id="objectives-of-radiological-zoning"><a class="header" href="#objectives-of-radiological-zoning">Objectives of Radiological Zoning</a></h2>
+<p>During normal operation, the objectives of radiological zoning are to:</p>
+<ul>
+<li>Classify zones</li>
+<li>Classify individuals into categories</li>
+<li>Establish local rules and monitoring</li>
+<li>Control real-time exposure</li>
+</ul>
+<h2 id="classification-of-zones"><a class="header" href="#classification-of-zones">Classification of Zones</a></h2>
+<ul>
+<li>Monitored Zone: A zone where professional exposure conditions need to be monitored, even if no specific protection measures are normally required.</li>
+<li>Controlled Zone: A zone where protection measures or safety provisions are or may be required to control normal exposures or prevent the spread of radioactive contamination.</li>
+</ul>
+<h2 id="classification-of-individuals-into-categories"><a class="header" href="#classification-of-individuals-into-categories">Classification of Individuals into Categories</a></h2>
+<ul>
+<li>Category A: Workers who regularly work in controlled zones and meet certain conditions such as medical fitness, basic radiation protection training, medical monitoring, individual dosimetry, and potential exposure exceeding 3/10 of the annual limits.</li>
+<li>Category B: Workers who regularly work in monitored zones and require specific radiation protection training for their assigned tasks, with a dose not exceeding 3/10 of the annual limits.</li>
+<li>Public: Individuals who are neither in Category A nor Category B and are not allowed access to controlled zones.</li>
+</ul>
+<h2 id="criteria-for-classification-of-controlled-zones"><a class="header" href="#criteria-for-classification-of-controlled-zones">Criteria for Classification of Controlled Zones</a></h2>
+<ul>
+<li>Dose Rates:
+<ul>
+<li>Yellow: 10 uSv/h &lt; D &lt; 0.8 mSv/h (1 to 80 times the Derived Air Concentration Limit)</li>
+<li>Orange: 0.8 mSv/h &lt; D &lt; 40 mSv/h (Derived Air Concentration Limit)</li>
+</ul>
+</li>
+</ul>
+<h2 id="limitation-of-zones"><a class="header" href="#limitation-of-zones">Limitation of Zones</a></h2>
+<p>Signage and markings are used in controlled and monitored zones:</p>
+<ul>
+<li>Green Zone: Permanent access for Category A workers, with the requirement of wearing passive and active dosimeters.</li>
+<li>Yellow Zone: Medium radiation risk, with specific radiation protection measures such as contamination protection and time control.</li>
+<li>Orange Zone: High radiation risk, with restricted access and mandatory time control.</li>
+<li>Red Zone: Normally restricted access.</li>
+</ul>
+<h2 id="example-of-radiology-installation"><a class="header" href="#example-of-radiology-installation">Example of Radiology Installation</a></h2>
+<p>In a radiology room, permanent boundaries are established using walls if possible. The floor may be marked, and signs or movable screens may be used. The zone may change from controlled to monitored when X-ray emission is intermittent, with optical and audible signals to prevent accidental access. The zone may become non-regulated when X-ray emission is not possible.</p>
 
                     </main>
 
