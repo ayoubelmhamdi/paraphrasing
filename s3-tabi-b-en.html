@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>s3-tabi-b-en - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">2.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">3.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">4.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72-en.html"><strong aria-hidden="true">5.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-b-en.html" class="active"><strong aria-hidden="true">6.</strong> s3-tabi-b-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-c-en.html"><strong aria-hidden="true">7.</strong> s3-tabi-c-en</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/s3-tabi-b-en.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="simplified-text"><a class="header" href="#simplified-text">Simplified Text:</a></h1>
+<h2 id="radiological-monitoring-of-workplaces"><a class="header" href="#radiological-monitoring-of-workplaces">Radiological Monitoring of Workplaces</a></h2>
+<p>Radiological monitoring of installations is a regulatory requirement that aims to:</p>
+<ul>
+<li>Evaluate the radiation risks at workstations in terms of external and internal exposure.</li>
+<li>Control and monitor exposures resulting from normal operation.</li>
+<li>Prevent potential exposures that exceed the reference levels associated with each workstation.</li>
+</ul>
+<h2 id="program-for-radiological-monitoring-of-installations"><a class="header" href="#program-for-radiological-monitoring-of-installations">Program for Radiological Monitoring of Installations</a></h2>
+<p>The establishment of a program for radiological monitoring of installations takes into account the following criteria:</p>
+<ul>
+<li>Nature of the installations (Nuclear Installations, Classified Installations for Environmental Protection).</li>
+<li>Nature of activities, including characterization of radioactive sources.</li>
+<li>Processes used for handling radioactive sources.</li>
+<li>Radiological zoning or classification of each workstation.</li>
+<li>Construction measures in place to ensure static and dynamic confinement, biological protection, and collection of effluents and waste.</li>
+<li>Operating conditions and general rules.</li>
+</ul>
+<p>The program should specify:</p>
+<ul>
+<li>Classification of workstations to be monitored and associated radiological risks.</li>
+<li>Parameters to be measured.</li>
+<li>Frequency of monitoring measurements.</li>
+<li>Detection methods and their technical specifications.</li>
+<li>Thresholds or reference levels associated with each workstation based on radiological zoning.</li>
+<li>Corrective actions or interventions in case of threshold exceedance.</li>
+</ul>
+<h2 id="classification-and-radiological-zoning-of-workstations"><a class="header" href="#classification-and-radiological-zoning-of-workstations">Classification and Radiological Zoning of Workstations</a></h2>
+<p>Within installations where radioactive sources are handled, the radiological classification of workstations is as follows:</p>
+<ul>
+<li>Monitored area: Any area not classified as a controlled area but where professional exposure conditions need to be monitored, even if no specific protection measures are normally required.</li>
+<li>Controlled area: Any area where specific protection measures or safety provisions are or may be required to control normal exposures and prevent potential exposures.</li>
+</ul>
+<h2 id="monitoring-of-premises"><a class="header" href="#monitoring-of-premises">Monitoring of Premises</a></h2>
+<p>Radiological monitoring of workstations is primarily based on the use of measurement devices with technical specifications compatible with the ionizing radiation present at workstations in general.
+These devices should provide accurate and reproducible responses based on the nature of the incident radiation.
+The measurement devices should be periodically calibrated according to technical procedures for secondary or primary calibration.
+The choice between fixed or mobile equipment depends on working conditions and the nature and estimated frequency of operations.</p>
+<h2 id="means-of-detection-used-for-premises-monitoring"><a class="header" href="#means-of-detection-used-for-premises-monitoring">Means of Detection Used for Premises Monitoring</a></h2>
+<p>A typical measurement system includes:</p>
+<ul>
+<li>A sensor with a detector such as an ionization chamber for measuring external exposure or a scintillation detector for measuring atmospheric contamination or contamination of liquids.</li>
+<li>Associated electronics for quantifying the charges delivered by the sensor and providing a calibrated pulse.</li>
+<li>A microprocessor-based unit for calculating the physical quantity to be compared with reference thresholds.</li>
+<li>A signaling unit triggered by the microprocessor, providing audible and visual signals in case of threshold exceedance.</li>
+</ul>
+<h2 id="monitoring-of-external-exposure"><a class="header" href="#monitoring-of-external-exposure">Monitoring of External Exposure</a></h2>
+<p>For monitoring external exposure in installations, two categories of devices are commonly used:</p>
+<ul>
+<li>Portable devices: These are easily manipulable devices provided to radiation protection personnel for ambient monitoring in premises. They are also made available to operators in irradiating environments as needed.</li>
+<li>Fixed devices installed permanently in an area where continuous measurement of radioactive ambiance is desired. These devices may transmit the measured value and/or emit an audible and visual alarm if the ambiance exceeds a predetermined threshold.</li>
+</ul>
+<h2 id="monitoring-of-premises-1"><a class="header" href="#monitoring-of-premises-1">Monitoring of Premises</a></h2>
+<h3 id="means-of-detection-used-for-monitoring-external-exposure"><a class="header" href="#means-of-detection-used-for-monitoring-external-exposure">Means of Detection Used for Monitoring External Exposure</a></h3>
+<p>Monitoring of external exposure can be performed retrospectively using passive dosimeters such as:</p>
+<ul>
+<li>Thermoluminescent dosimeters.</li>
+<li>Photoluminescent dosimeters.</li>
+<li>OSL (Optically Stimulated Luminescence) dosimeters.</li>
+<li>Electron dosimeters.</li>
+<li>Electron Paramagnetic Resonance (EPR) dosimeters.</li>
+<li>Photographic emulsion dosimeters.</li>
+</ul>
+<h3 id="means-of-detection-used-for-monitoring-atmospheric-contamination"><a class="header" href="#means-of-detection-used-for-monitoring-atmospheric-contamination">Means of Detection Used for Monitoring Atmospheric Contamination</a></h3>
+<p>Monitoring of atmospheric contamination in premises is carried out using air sampling devices with filters.
+Aerosols are collected on paper filters, and iodine is collected on activated charcoal cartridges.
+Surface contamination of workstations can be monitored either directly using portable measurement devices equipped with appropriate probes or indirectly through the use of sensors, etc.</p>
+<h2 id="means-of-detection-used-for-premises-monitoring-1"><a class="header" href="#means-of-detection-used-for-premises-monitoring-1">Means of Detection Used for Premises Monitoring</a></h2>
+<ul>
+<li>Radiological Control Panel
+Overall radiological monitoring of a system or installation can be achieved through a computerized radiation protection network that connects various fixed and mobile sensors to a visualization system on a screen. This system manages radiological monitoring.</li>
+</ul>
+<h2 id="premises-monitoring"><a class="header" href="#premises-monitoring">Premises Monitoring</a></h2>
+<h3 id="local-level"><a class="header" href="#local-level">Local Level</a></h3>
+<ul>
+<li>Monitoring of different measurement paths from local control room units.</li>
+<li>Local adjustment of radiation protection thresholds in terms of dose rate or atmospheric contamination.</li>
+<li>Activation of audible and visual alarms when these thresholds are exceeded.</li>
+</ul>
+<h3 id="centralized-level"><a class="header" href="#centralized-level">Centralized Level</a></h3>
+<ul>
+<li>Monitoring of all radiation protection paths from a Radiation Control Panel (RCP).</li>
+</ul>
+<h2 id="alarm-triggering-thresholds"><a class="header" href="#alarm-triggering-thresholds">Alarm Triggering Thresholds</a></h2>
+<p>A minimum of two dose rate thresholds (S1 and S2) are set for this purpose. The chosen values for these thresholds are based on operational rules developed according to national regulations. Exceeding the S1 threshold requires evacuation of the affected areas and investigation of the incident's causes. Exceeding the S2 threshold requires evacuation of the affected zone and implementation of more comprehensive measures concerning the building and the environment.</p>
+<h2 id="calibration-and-control-of-the-proper-functioning-of-fixed-measurement-chains"><a class="header" href="#calibration-and-control-of-the-proper-functioning-of-fixed-measurement-chains">Calibration and control of the proper functioning of fixed measurement chains</a></h2>
+<ul>
+<li>Gamma beacons: Gamma beacons are usually calibrated on their installation site with radioactive sources, whose characteristics are defined by the manufacturer. The positioning of these sources in relation to the sensors, during calibration operations, is ensured with specific tools. Gamma beacons are planned to be calibrated once a year.</li>
+<li>Aerosol and iodine beacons: Aerosol monitors are usually calibrated on their installation site with radioactive sources emitting spectra defined by the manufacturer and simulating the spectra of the aerosols to be measured. These monitors are planned to be calibrated once a year.
+Thank you for your attention.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="s3-sebihi-dosimetrie-radioddiagnostic-72-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="s3-tabi-c-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="s3-sebihi-dosimetrie-radioddiagnostic-72-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="s3-tabi-c-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>

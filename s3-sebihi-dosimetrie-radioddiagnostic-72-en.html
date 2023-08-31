@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>s3-sebihi-dosimetrie-radioddiagnostic-72-en - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">2.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">3.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">4.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72-en.html" class="active"><strong aria-hidden="true">5.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-b-en.html"><strong aria-hidden="true">6.</strong> s3-tabi-b-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-c-en.html"><strong aria-hidden="true">7.</strong> s3-tabi-c-en</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/s3-sebihi-dosimetrie-radioddiagnostic-72-en.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="dosimetry-in-radiodiagnosis"><a class="header" href="#dosimetry-in-radiodiagnosis">Dosimetry in Radiodiagnosis</a></h1>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Radiological detriment from a procedure is related to the effective dose.</p>
+<ul>
+<li>Review of basic dose indicators and measurement methods.
+Estimation of the effective dose.</li>
+<li>Example of effective doses in radiodiagnosis.
+Although the doses administered in medical imaging are generally low, some exams can cause significant harm.
+We will see:</li>
+<li>Dose indicators,</li>
+<li>Means of measurement,</li>
+<li>How to use them to determine organ doses and effective dose.</li>
+</ul>
+<h2 id="why-determine-the-dose"><a class="header" href="#why-determine-the-dose">Why determine the dose?</a></h2>
+<p>Knowing the absorbed dose from radiation in a patient undergoing a diagnostic procedure is essential for evaluating the radiological detriment of the procedure.</p>
+<ul>
+<li>Medical exposure is the primary artificial source of population exposure.</li>
+<li>Radiological practice is constantly evolving (CT scans, ...).</li>
+<li>Equipment is often poorly adjusted and used.</li>
+<li>For low doses, radiation dermatitis can appear long after exposure.</li>
+<li>Recommendations and legislation exist to reduce patient doses.</li>
+</ul>
+<h2 id="results-of-the-cec-1991-survey"><a class="header" href="#results-of-the-cec-1991-survey">Results of the CEC 1991 survey</a></h2>
+<p>An international survey in 16 countries/83 departments was conducted by 15 radiology experts for quality control and measurement of entrance surface dose.
+CONCLUSION: Large dispersion of doses for comparable quality!</p>
+<h2 id="type-of-projection"><a class="header" href="#type-of-projection">Type of projection</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Type of projection</th><th>Standard Deviation</th></tr></thead><tbody>
+<tr><td>Chest</td><td></td></tr>
+<tr><td>Lateral Chest</td><td></td></tr>
+<tr><td>Lumbar Spine AP or PA</td><td></td></tr>
+<tr><td>Lumbar Spine Lateral</td><td></td></tr>
+<tr><td>Maximum</td><td></td></tr>
+<tr><td>3rd percentile</td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="detriment---effective-dose"><a class="header" href="#detriment---effective-dose">Detriment - Effective dose</a></h2>
+<p>Exposure to radiation in different tissues and organs results in different probabilities of different severities.
+This combination is called &quot;Detriment&quot;.</p>
+<ul>
+<li>The effective dose is the quantitative representation of the radiological detriment.</li>
+<li>E: effective dose</li>
+<li>w: weighting factor for organ or tissue T</li>
+<li>H: equivalent dose to organ or tissue T</li>
+<li>The effective dose is not &quot;measurable&quot;!</li>
+<li>Tissue weighting factor, Wr
+| Tissue                | 1977 | 1991 | 2007 |
+|-----------------------|------|------|------|
+| Gonads                | 0.25 | 0.20 | 0.08 |
+| Red bone marrow       | 0.12 | 0.12 | 0.12 |
+| Colon                 | 0.12 | 0.12 |      |
+| Lungs                 | 0.12 | 0.12 |      |
+| Stomach               | 0.12 | 0.12 |      |
+| Bladder               | 0.05 | 0.04 |      |
+| Breasts               | 0.15 | 0.05 | 0.12 |
+| Liver                 | 0.05 | 0.04 |      |
+| Esophagus             | 0.12 | 0.05 | 0.04 |
+| Thyroid               | 0.03 | 0.05 | 0.04 |
+| Skin                  | 0.01 | 0.01 |      |
+| Bone surface          | 0.03 | 0.01 | 0.01 |
+| Remaining             | 0.30 | 0.05 | 0.12 |</li>
+</ul>
+<h2 id="dosimetry-in-conventional-radiology-and-fluoroscopy"><a class="header" href="#dosimetry-in-conventional-radiology-and-fluoroscopy">Dosimetry in Conventional Radiology and Fluoroscopy</a></h2>
+<h3 id="dosimetric-quantities"><a class="header" href="#dosimetric-quantities">Dosimetric quantities</a></h3>
+<ul>
+<li>Air kerma dose D (mGy)</li>
+<li>Entrance dose D (mGy)</li>
+<li>Depth dose D (mGy) or organ dose D</li>
+<li>Dose-area product DAP (mGy.cm²)</li>
+</ul>
+<h3 id="patient-dose-quantities"><a class="header" href="#patient-dose-quantities">Patient Dose Quantities</a></h3>
+<ul>
+<li>Filters</li>
+<li>Collimator</li>
+<li>Dose-area product (DAP) = air kerma x field surface</li>
+<li>Entrance dose (surface) = incident air kerma x backscatter factor</li>
+<li>Backscatter Grid</li>
+<li>Image receptor</li>
+</ul>
+<h3 id="illustration"><a class="header" href="#illustration">Illustration</a></h3>
+<p><img src="illustration.png" alt="Illustration" /></p>
+<h3 id="x-ray-tube-kv-mmal"><a class="header" href="#x-ray-tube-kv-mmal">X-ray tube kV, mmAl</a></h3>
+<h3 id="dose-area-product"><a class="header" href="#dose-area-product">Dose-Area Product</a></h3>
+<p>Ionization chambers
+Air dose
+Dose</p>
+<h1 id="correction"><a class="header" href="#correction">Correction:</a></h1>
+<p>For this dose, many indicators have been established.
+Distribution of dose in CT scanning
+X-ray tube X-ray tube
+detector
+Almost homogeneous irradiation in the explored volume,
+unlike conventional radiology.
+Quantities specific to CT scanning
+CTDI » ~ Computed Tomographic Dose Index (mGy).</p>
+<ul>
+<li>Quantity to specify the dose delivered by scanners
+MSAD: Multiple Scan Average Dose, in mGy
+PDL: Dose Length Product, in mGy.cm
+CTDI &amp; MSAD %» _ organ doses
+PDL &gt; risk estimation
+Distribution of dose for a slice
+% x-RAY SOURCE
+mms! me COLLIMATOR
+rh Along the Z axis
+Profile
+Distribution of dose for a slice
+in air
+in phantom - 1 cm
+in phantom - at the center:
+Dose profiles along
+the Z axis
+y NN
+Dose (mGy)
+Dose profile for a slice
+T: Slice thickness
+-61 -47 27 0 27 AT
+Relative position on the Z axis
+Illustration of the single slice profile D(z)
+6T
+Dose profile for a slice
+For each slice, the
+received dose is the sum
+of these 2 parts.
+Nominal slice thickness. Ideally,
+it corresponds to the width of the detector
+(D).
+Only the part between the two half-lines
+participates in the formation of
+the image.
+The penumbra (black) on either side
+of the slice does not contribute
+to the image but is an integral
+part of the received dose.
+Dosimetric quantity - CTDI
+The Computed Tomographic Dose Index (CTDI) is equal
+to the integral of the dose profile (D(z)), for a single slice,
+calculated along the (z) axis representing the rotation axis
+of the scanner, divided by the nominal slice thickness (T).
+1 +
+CTDI = pI. Poe In mGray
+Dose (mGy)
+Dosimetric quantity - CTDI
+2.0
+T: Slice thickness
+0.5
+-4T-2T 21
+Relative position on the Z axis
+l vp
+CTDI =—. | D(z) dz
+rd (z)
+Dosimetric quantity - CTDI for
+multiple slices
+&quot;The CTDI is equal to the integral of the dose profile D(z),
+calculated along the (z) axis representing the rotation axis
+of the scanner, for a single rotation of the tube of 360°,
+divided by the number of slices N obtained for a single
+rotation of the tube of 360° and the nominal slice width T:
++00
+CTDI = { DZ) 4, | _EnmGray
+NxT
+é
+=f i
+Dose profile for multiple slices
+2.5
+2.0
+—
+w
+Dose (mGy)
+°
+0.5
+=) nf
+-6T - 4T -2T 0 2T 4T 6éT
+Relative position on the Z axis
+DOSE MEASUREMENT
+What parameters to measure?</li>
+<li>Single-slice profile</li>
+<li>CTDI in air</li>
+<li>CTDI in a phantom (CTDI,, CTDI,)</li>
+<li>Patient dose control
+Computed Tomographic Dose Index
+over 10cm (CTDI,,,)
+&quot;In practice: The measurement or calculation of the integral is performed on
+a limited length.
+&quot;It is the integral of the dose profile (D(z)), over a length of 10
+cm, calculated along the (z) axis, for a single slice, divided
+by the nominal slice thickness (T).
++5
+CTDI10cm=CTDI10cm = 1/ T [Di@)de
+55
+This index is directly measurable, in air or in a phantom,
+using a &quot;pencil&quot; ionization chamber with a sensitive volume
+of 10cm long.
+TF TF
+ce
+Measurements by ionization chamber
+So-called &quot;pencil&quot; chamber: F
+L=10cm,V=3cm&gt; ~—_—,,</li>
+<li>absolute dose values</li>
+<li>easy to implement</li>
+<li>comparison of scanners, QC</li>
+<li>reference doses</li>
+<li>patient dosimetry
+RK le H|R
+Ale
+Dosimetric quantity - CTDI
+, [De ).# Location Ep.
+Head 0.0023
+Neck (ENT) 0.0054
+Chest 0.017
+Abdomen 0.015
+Pelvis 0.019</li>
+</ul>
+<h2 id="examples-of-dose"><a class="header" href="#examples-of-dose">Examples of dose</a></h2>
+<p>Doses measured in CT scanning</p>
+<ul>
+<li>Head examination -
+Machine A B C D E
+kVp 120 120 120 130 125
+Thickness (mm) 10 5-10 10 5-8-10 4-38-10
+mAs 586 385 348 333 AAD
+center dose 42 47 35 49 34
+(mGy)
+Comparison, E(mSv),
+conventional radiology exams and CT scans
+Head 0 2 4 mSv 6 8 10
+Abdomen 0 2 4 mSv 6 8 10
+Lumbar spine 0 2 4 mSv 6 8 10
+Pelvis 0 2 4 mSv 6 8 10
+Conventional - = - _qraprés P.C. Shrimptoniet/B:FiWallsBJR66;91993-ar</li>
+</ul>
+<h2 id="dosimetry-in-mammography"><a class="header" href="#dosimetry-in-mammography">Dosimetry in Mammography</a></h2>
+<p>Average Glandular Dose (AGD)
+The recommended dosimetric quantity for assessing radiation risk is the Average Glandular Dose.
+AGD (mGy)
+AGD cannot be directly measured but is determined through measurements on phantoms.
+The entrance dose (to the breast), KASE, (ESAK: Entrance Surface Air Kerma) is the quantity used to determine the dose in mammography.
+69
+AGD is expressed using conversion factors obtained through Monte Carlo calculations:
+AGD = KASE * g * c * s
+g = factor that converts KASE to AGD delivered to the breast.
+Radiation Dosimetry in Radiodiagnosis</p>
+<p>The calculations for this factor were done using a reference spectrum of Mo/Mo and a standard breast represented by a half-cylindrical phantom with a diameter of 16 cm. The center of the phantom is composed of 50% fatty tissue and 50% glandular tissue, and the periphery is covered by a 5 mm layer of fatty tissue.</p>
+<p>This factor depends on the compressed breast thickness (ranging from 2 to 11 cm) and the CDA (ranging from 0.30 to 0.60 mm of Al).</p>
+<p>DGM = KASE * g * c * s</p>
+<p>c: a factor that takes into account the differences in breast composition based on its compressed thickness.
+s: a coefficient that considers the influence of beam quality on g, with different values depending on the spectrum used:</p>
+<ul>
+<li>s = 1 for Mo/Mo</li>
+<li>s = 1.017 for Mo/Rh</li>
+<li>s = 1.042 for W/Rh</li>
+<li>s = 1.061 for RWWRh</li>
+<li>s = 1.044 for RWAl</li>
+</ul>
+<p>DGM is displayed for each exposure in digital mammography.
+DGM is provided by charts based on exposure parameters and breast thickness in analog mammography.</p>
+<p>Entrance dose (D,) is 10 mGy per incidence for an average breast, which corresponds to a DGM of 2.5 mGy.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="2308.14963.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="s3-tabi-b-en.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="2308.14963.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="s3-tabi-b-en.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>
