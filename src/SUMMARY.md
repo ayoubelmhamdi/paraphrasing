@@ -5,4 +5,6 @@
 - [seance-1-les-ondes-mecaniques-progressives-8](./seance-1-les-ondes-mecaniques-progressives-8.md)
 - [2207.14238](./2207.14238.md)
 - [2308.14963](./2308.14963.md)
-- [s3-tabi-c](./s3-tabi-c.md)
+- [s3-sebihi-dosimetrie-radioddiagnostic-72-en](./s3-sebihi-dosimetrie-radioddiagnostic-72-en.md)
+- [s3-tabi-b-en](./s3-tabi-b-en.md)
+- [s3-tabi-c-en](./s3-tabi-c-en.md)
