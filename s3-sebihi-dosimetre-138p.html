@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>s3-sebihi-dosimetre-138p - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><a href="seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">2.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">3.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">4.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72-en.html"><strong aria-hidden="true">5.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-b-en.html"><strong aria-hidden="true">6.</strong> s3-tabi-b-en</a></li><li class="chapter-item expanded "><a href="s3-tabi-c-en.html"><strong aria-hidden="true">7.</strong> s3-tabi-c-en</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetre-138p.html" class="active"><strong aria-hidden="true">8.</strong> s3-sebihi-dosimetre-138p</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72.html"><strong aria-hidden="true">9.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/s3-sebihi-dosimetre-138p.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="dosimétrie-photonique-et-biologique"><a class="header" href="#dosimétrie-photonique-et-biologique">Dosimétrie photonique et biologique</a></h1>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>Le module de dosimétrie photonique et biologique étudie les rayonnements électromagnétiques (rayons X, rayons γ) et les particules, ainsi que leurs interactions avec la matière inerte et biologique. Il aborde également le dépôt d'énergie dans la matière.</p>
+<h2 id="chapitre-i-physique-générale-des-rayonnements"><a class="header" href="#chapitre-i-physique-générale-des-rayonnements">Chapitre I: Physique générale des rayonnements</a></h2>
+<ul>
+<li>Classification des rayonnements : rayonnements radioactifs, rayonnement X</li>
+<li>Interaction des particules chargées avec la matière</li>
+<li>Interaction des particules neutres avec la matière</li>
+<li>Interaction des photons avec la matière</li>
+</ul>
+<h2 id="chapitre-ii-dosimétrie-fondamentale"><a class="header" href="#chapitre-ii-dosimétrie-fondamentale">Chapitre II: Dosimétrie fondamentale</a></h2>
+<ul>
+<li>Dosimétrie des photons</li>
+<li>Dosimétrie des électrons</li>
+<li>Dosimétrie des neutrons</li>
+</ul>
+<h2 id="chapitre-iii-radiobiologie"><a class="header" href="#chapitre-iii-radiobiologie">Chapitre III: Radiobiologie</a></h2>
+<ul>
+<li>Grandeurs dosimétriques</li>
+<li>Effets déterministes</li>
+<li>Effets stochastiques</li>
+<li>Contexte de la radioprotection</li>
+</ul>
+<h2 id="quest-ce-quun-rayonnement-"><a class="header" href="#quest-ce-quun-rayonnement-">Qu'est-ce qu'un rayonnement ?</a></h2>
+<p>Un rayonnement est une forme d'énergie qui se propage dans l'espace sous forme d'onde. Les rayonnements ionisants sont utilisés dans le traitement du cancer, l'imagerie diagnostique (rayons X, ultrasons, résonance magnétique nucléaire) et la médecine nucléaire (utilisation de radio-isotopes).</p>
+<h2 id="classification-des-rayonnements"><a class="header" href="#classification-des-rayonnements">Classification des rayonnements</a></h2>
+<p>Selon la nature du rayonnement :</p>
+<ul>
+<li>Rayonnements non ionisants : ondes radio, ultraviolet, visible, infrarouge</li>
+<li>Rayonnements ionisants : rayons X, rayons γ, particules chargées (électrons, protons, particules α, etc.)</li>
+</ul>
+<h2 id="quest-ce-quun-rayonnement-ionisant-"><a class="header" href="#quest-ce-quun-rayonnement-ionisant-">Qu'est-ce qu'un rayonnement ionisant ?</a></h2>
+<p>Un rayonnement est dit ionisant s'il possède suffisamment d'énergie pour arracher un électron à un atome, le rendant ainsi ionisé. Cela peut se produire lors d'une interaction avec la matière.</p>
+<h2 id="interaction-des-particules-chargées-avec-la-matière"><a class="header" href="#interaction-des-particules-chargées-avec-la-matière">Interaction des particules chargées avec la matière</a></h2>
+<p>Les particules chargées, telles que les électrons et les protons, interagissent avec la matière en transférant de l'énergie. Cette interaction peut entraîner des effets thermiques, des excitations ou des ionisations.</p>
+<h2 id="interaction-des-photons-avec-la-matière"><a class="header" href="#interaction-des-photons-avec-la-matière">Interaction des photons avec la matière</a></h2>
+<p>Les photons, tels que les rayons X et les rayons γ, interagissent avec la matière en transférant de l'énergie aux électrons des atomes. Cette interaction peut également entraîner des effets thermiques, des excitations ou des ionisations.</p>
+<h2 id="dosimétrie-des-photons"><a class="header" href="#dosimétrie-des-photons">Dosimétrie des photons</a></h2>
+<p>La dosimétrie des photons consiste à mesurer la quantité d'énergie déposée par les photons dans la matière. Cela permet d'évaluer l'effet biologique de ces rayonnements sur les tissus.</p>
+<h2 id="dosimétrie-des-électrons"><a class="header" href="#dosimétrie-des-électrons">Dosimétrie des électrons</a></h2>
+<p>La dosimétrie des électrons consiste à mesurer la quantité d'énergie déposée par les électrons dans la matière. Les électrons ont une portée limitée dans la matière, ce qui nécessite une évaluation précise de leur dépôt d'énergie.</p>
+<h2 id="dosimétrie-des-neutrons"><a class="header" href="#dosimétrie-des-neutrons">Dosimétrie des neutrons</a></h2>
+<p>La dosimétrie des neutrons consiste à mesurer la quantité d'énergie déposée par les neutrons dans la matière. Les neutrons ont une interaction complexe avec la matière, ce qui rend leur dosimétrie plus difficile.</p>
+<h2 id="radiobiologie"><a class="header" href="#radiobiologie">Radiobiologie</a></h2>
+<p>La radiobiologie étudie les effets biologiques des rayonnements ionisants sur les tissus vivants. Elle permet de comprendre les mécanismes de l'effet des rayonnements sur la santé et de développer des stratégies de radioprotection.</p>
+<h2 id="grandeurs-dosimétriques"><a class="header" href="#grandeurs-dosimétriques">Grandeurs dosimétriques</a></h2>
+<p>Les grandeurs dosimétriques permettent de quantifier l'effet des rayonnements sur les tissus. Elles incluent l'absorbed dose, la dose équivalente et la dose efficace.</p>
+<h2 id="effets-déterministes"><a class="header" href="#effets-déterministes">Effets déterministes</a></h2>
+<p>Les effets déterministes sont des effets biologiques qui se produisent lorsque la dose de rayonnement dépasse un certain seuil. Ces effets peuvent inclure des brûlures, des lésions tissulaires et des effets sur les organes vitaux.</p>
+<h2 id="effets-stochastiques"><a class="header" href="#effets-stochastiques">Effets stochastiques</a></h2>
+<p>Les effets stochastiques sont des effets biologiques qui se produisent de manière aléatoire, sans seuil de dose. Ces effets peuvent inclure le cancer et les mutations génétiques.</p>
+<h2 id="contexte-de-la-radioprotection"><a class="header" href="#contexte-de-la-radioprotection">Contexte de la radioprotection</a></h2>
+<p>La radioprotection vise à protéger les individus des effets néfastes des rayonnements ionisants. Cela inclut la mise en place de mesures de sécurité, la surveillance de l'exposition aux rayonnements et la formation des travailleurs exposés.</p>
+<p>En conclusion, l'étude de la dosimétrie photonique et biologique permet de comprendre les interactions des rayonnements avec la matière et leurs effets sur la santé, ce qui est essentiel dans les domaines médicaux et de la radioprotection.
+Interaction des photons avec la matière (RX, Ry)</p>
+<p>Lorsqu'un faisceau de photons, comme les rayons X et les rayons gamma, traverse un matériau, il interagit avec les atomes de ce matériau de manière aléatoire. Cette interaction entraîne une atténuation du faisceau de photons.</p>
+<p>Il existe plusieurs mécanismes d'interaction des photons avec la matière, tels que la diffusion, l'absorption et la diffusion Compton. Ces mécanismes dépendent de l'énergie des photons et du type de matériau traversé.</p>
+<p>La diffusion se produit lorsque les photons interagissent avec les électrons des atomes du matériau. Cette interaction modifie la direction des photons, mais n'affecte pas leur énergie. La diffusion peut être élastique, où les photons conservent leur énergie, ou inélastique, où les photons perdent de l'énergie.</p>
+<p>L'absorption se produit lorsque les photons sont complètement absorbés par les atomes du matériau. Cette absorption dépend de l'énergie des photons et des propriétés des atomes. Lorsque les photons sont absorbés, ils peuvent exciter les électrons des atomes ou ioniser les atomes en leur enlevant des électrons.</p>
+<p>La diffusion Compton se produit lorsque les photons interagissent avec les électrons des atomes et perdent une partie de leur énergie. Les photons diffusés ont une énergie réduite et une direction modifiée.</p>
+<p>L'interaction des photons avec la matière est utilisée en médecine pour le diagnostic et le traitement. Par exemple, les rayons X sont utilisés pour réaliser des radiographies et des scanners, tandis que les rayons gamma sont utilisés en scintigraphie et en thérapie par radiothérapie.</p>
+<p>En résumé, lorsque les photons traversent un matériau, ils interagissent avec les atomes de ce matériau de manière aléatoire, ce qui entraîne une atténuation du faisceau de photons. Cette interaction peut se produire par diffusion, absorption ou diffusion Compton, en fonction de l'énergie des photons et du type de matériau traversé.
+Lorsqu'un photon traverse un matériau, il peut être atténué, c'est-à-dire qu'il peut changer de direction ou transférer son énergie au matériau. Cette atténuation est due à deux processus : la diffusion et l'absorption.</p>
+<p>La diffusion se produit lorsque le photon change de direction en interagissant avec les électrons du matériau. Cette interaction peut être facultative, c'est-à-dire que le photon peut passer à travers le matériau sans être diffusé, ou elle peut être obligatoire, ce qui signifie que le photon est diffusé. La probabilité d'interaction facultative ou obligatoire est appelée coefficient d'atténuation ou d'absorption. Il existe différentes lois qui décrivent l'atténuation des photons.</p>
+<p>Lorsque le photon interagit avec un électron, celui-ci peut être mis en mouvement et se comporter comme une particule chargée. Cela peut entraîner des excitations ou des ionisations dans le matériau.</p>
+<p>Il existe trois types d'interactions entre les photons et les électrons : l'effet photoélectrique, l'effet Compton et la diffusion Rayleigh. L'effet photoélectrique se produit lorsque l'énergie du photon est suffisamment élevée pour arracher un électron lié à un atome. L'électron expulsé perd son énergie en ionisant et excitant le matériau, ce qui entraîne un réarrangement électronique. L'effet Compton se produit lorsque le photon interagit avec un électron libre ou faiblement lié, et l'énergie du photon est partagée entre le photon diffusé et l'électron Compton. La diffusion Rayleigh est un type de diffusion élastique où le photon change de direction sans perdre d'énergie.</p>
+<p>Il existe également des interactions entre les photons et les noyaux des atomes du matériau. Si l'énergie du photon correspond à l'énergie nécessaire pour exciter le noyau d'un atome, le photon peut être capturé et le noyau se trouve excité. Cette interaction est appelée résonance. Le noyau peut ensuite se désexciter en émettant un autre photon ou en subissant d'autres processus.</p>
+<p>En résumé, lorsque les photons traversent un matériau, ils peuvent être atténués par diffusion et absorption. Les interactions avec les électrons peuvent entraîner des excitations et des ionisations, tandis que les interactions avec les noyaux peuvent exciter les noyaux. Différents types d'interactions, tels que l'effet photoélectrique, l'effet Compton et la diffusion Rayleigh, peuvent se produire en fonction de l'énergie des photons et des propriétés du matériau.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="s3-tabi-c-en.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="s3-sebihi-dosimetrie-radioddiagnostic-72.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="s3-tabi-c-en.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="s3-sebihi-dosimetrie-radioddiagnostic-72.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>
