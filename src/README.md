@@ -13,3 +13,4 @@ This simplify use Chatgpt3.5
 - [s3-tabi-c-en](./s3-tabi-c-en.md)
 - [s3-sebihi-dosimetre-138p](./s3-sebihi-dosimetre-138p.md)
 - [s3-sebihi-dosimetrie-radioddiagnostic-72](./s3-sebihi-dosimetrie-radioddiagnostic-72.md)
+- [s3-sebihi-dosimetrie-en-medcine-nucleaire-47p](./s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.md)
