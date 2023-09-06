@@ -1,4 +1,5 @@
 # Dosimétrie en Radiodiagnostic
+-------------------------------
 
 ## Introduction
 Dans cette section, nous allons parler de la dosimétrie en radiodiagnostic, c'est-à-dire de la mesure de la dose de rayonnement reçue par les patients lors d'examens médicaux. Nous allons voir quels sont les indicateurs de dose utilisés et comment ils sont mesurés. Nous allons également expliquer ce qu'est la dose efficace et donner des exemples de doses efficaces en radiodiagnostic.
@@ -20,7 +21,7 @@ Les examens de scanner sont parmi les plus irradiants pour les patients. La dist
 
 ## Conclusion
 La dosimétrie en radiodiagnostic est essentielle pour évaluer les risques liés aux radiations lors des examens médicaux. Il est important de mesurer et de contrôler les doses de rayonnement administrées aux patients. Les recommandations et les législations visant à réduire les doses doivent être suivies.
-La dosimétrie en radiodiagnostic est une mesure de la dose de rayonnement reçue par un patient lors d'un examen radiologique. L'un des paramètres importants dans la dosimétrie est l'épaisseur du tissu traversé par les rayons X. 
+La dosimétrie en radiodiagnostic est une mesure de la dose de rayonnement reçue par un patient lors d'un examen radiologique. L'un des paramètres importants dans la dosimétrie est l'épaisseur du tissu traversé par les rayons X.
 
 Le coefficient "s" est utilisé pour prendre en compte l'influence de la qualité des faisceaux de rayons X sur la dose absorbée par le patient. Différentes combinaisons de matériaux sont utilisées pour générer les faisceaux de rayons X, et chaque combinaison a un coefficient "s" spécifique. Par exemple, pour une combinaison de molybdène/molybdène, le coefficient "s" est de 1, tandis que pour une combinaison de tungstène/rhénium, le coefficient "s" est de 1,042.
 

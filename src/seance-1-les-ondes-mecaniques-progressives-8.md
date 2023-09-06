@@ -1,5 +1,5 @@
 # Physique et Chimie : 2ème Année Bac - Les ondes mécaniques progressives
-----------
+===============================
 
 ## I- Définitions
 1-1/ Onde mécanique

@@ -1,4 +1,5 @@
 # Dosimétrie photonique et biologique
+---------------
 
 ## Introduction
 Le module de dosimétrie photonique et biologique étudie les rayonnements électromagnétiques (rayons X, rayons γ) et les particules, ainsi que leurs interactions avec la matière inerte et biologique. Il aborde également le dépôt d'énergie dans la matière.

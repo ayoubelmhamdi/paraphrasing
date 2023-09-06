@@ -1,4 +1,5 @@
 # La médecine nucléaire
+-----------------------
 
 La médecine nucléaire utilise des substances radioactives pour le diagnostic et le traitement des maladies. Par exemple, on peut utiliser de l'iode 131 avec une caméra spéciale pour détecter des problèmes dans le corps.
 
