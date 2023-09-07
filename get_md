@@ -14,7 +14,7 @@ readarray -t mdbook < <( \
 
 for file in "${mdbook[@]}";do
   echo "$file"
-  cp "$paraphrasingPATH/$file" ./src
+  mv "$paraphrasingPATH/$file" ./src
 
   echo "- [${file%.md}](./$file)" >> ./src/SUMMARY.md
   echo "- [${file%.md}](./$file)" >> ./src/README.md
