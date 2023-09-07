@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>macmahon2017 - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Bac</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="bac-seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">2.1.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Articles</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">3.1.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">3.2.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="Nodule-pulmonaire_S-Bennani.html"><strong aria-hidden="true">3.3.</strong> Nodule-pulmonaire_S-Bennani</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> s3</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="s3-sebihi-dosimetre-138p.html"><strong aria-hidden="true">4.1.</strong> s3-sebihi-dosimetre-138p</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72.html"><strong aria-hidden="true">4.2.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html"><strong aria-hidden="true">4.3.</strong> s3-sebihi-dosimetrie-en-medcine-nucleaire-47p</a></li></ol></li><li class="chapter-item expanded "><a href="macmahon2017.html" class="active"><strong aria-hidden="true">5.</strong> macmahon2017</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/macmahon2017.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="guidelines-for-management-of-incidental-pulmonary-nodules-detected-on-ct-images-from-the-fleischner-society-2017"><a class="header" href="#guidelines-for-management-of-incidental-pulmonary-nodules-detected-on-ct-images-from-the-fleischner-society-2017">Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images: From the Fleischner Society 2017</a></h1>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<ul>
+<li>The Fleischner Society has updated its guidelines for managing incidental pulmonary nodules found on CT scans.</li>
+<li>These guidelines are meant to help doctors and patients make decisions about follow-up exams and treatment.</li>
+<li>The guidelines are based on the opinions of a group of experts in radiology, pulmonology, surgery, pathology, and other specialties.</li>
+</ul>
+<h2 id="changes-in-the-guidelines"><a class="header" href="#changes-in-the-guidelines">Changes in the Guidelines</a></h2>
+<ul>
+<li>The minimum size for routine follow-up of solid nodules has been increased.</li>
+<li>Follow-up intervals are now given as a range instead of a specific time period.</li>
+<li>The guidelines for solid and subsolid nodules have been combined into one table.</li>
+<li>Specific recommendations have been included for multiple nodules.</li>
+</ul>
+<h2 id="who-the-guidelines-apply-to"><a class="header" href="#who-the-guidelines-apply-to">Who the Guidelines Apply to</a></h2>
+<ul>
+<li>The guidelines do not apply to lung cancer screening, patients under 35 years old, immunocompromised patients, or patients with known primary cancer.</li>
+<li>For lung cancer screening, the American College of Radiology Lung CT Screening Reporting and Data System (Lung-RADS) guidelines should be followed.</li>
+</ul>
+<h2 id="recommendations-for-solid-nodules"><a class="header" href="#recommendations-for-solid-nodules">Recommendations for Solid Nodules</a></h2>
+<ul>
+<li>For low-risk patients with solid nodules smaller than 6 mm, no routine follow-up is needed.</li>
+<li>For high-risk patients with solid nodules smaller than 6 mm, a follow-up CT scan at 12 months or tissue sampling may be considered.</li>
+<li>For low-risk patients with multiple solid nodules, follow-up CT scans should be done at 3-6 months.</li>
+<li>For high-risk patients with multiple solid nodules, follow-up CT scans should be done at 3-6 months.</li>
+</ul>
+<h2 id="recommendations-for-subsolid-nodules"><a class="header" href="#recommendations-for-subsolid-nodules">Recommendations for Subsolid Nodules</a></h2>
+<ul>
+<li>For ground glass subsolid nodules smaller than 6 mm, no routine follow-up is needed.</li>
+<li>For part solid subsolid nodules, a follow-up CT scan at 3-6 months is recommended to confirm persistence.</li>
+<li>For multiple subsolid nodules, a follow-up CT scan at 3-6 months is recommended.</li>
+</ul>
+<h2 id="general-recommendations"><a class="header" href="#general-recommendations">General Recommendations</a></h2>
+<ul>
+<li>CT scans of the thorax should be reconstructed and archived with thin sections to accurately measure nodules.</li>
+<li>Low-radiation techniques should be used for follow-up CT scans.</li>
+<li>Prior imaging studies should be reviewed to compare with current scans.</li>
+</ul>
+<p><em>Note: This is a simplified summary of the guidelines. Please consult the original document for more detailed information.</em></p>
+<h1 id="recommandations-pour-le-suivi-des-nodules-pulmonaires"><a class="header" href="#recommandations-pour-le-suivi-des-nodules-pulmonaires">Recommandations pour le suivi des nodules pulmonaires</a></h1>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<ul>
+<li>Les mesures en millimètres fractionnaires ne sont pas recommandées car elles impliquent une précision plus grande que celle qui peut être atteinte en pratique.</li>
+<li>Les seuils de taille pour le suivi des nodules sont de 6 mm pour les nodules solides et de 6-8 mm pour les nodules partiellement solides.</li>
+<li>Les mesures linéaires manuelles peuvent être remplacées par des mesures volumétriques automatisées ou semi-automatisées, qui sont plus reproductibles.</li>
+</ul>
+<h2 id="nodules-solides-de-moins-de-6-mm"><a class="header" href="#nodules-solides-de-moins-de-6-mm">Nodules solides de moins de 6 mm</a></h2>
+<ul>
+<li>Les nodules solides de moins de 6 mm ne nécessitent pas de suivi systématique chez tous les patients à haut risque.</li>
+<li>Cependant, certains nodules de moins de 6 mm avec une morphologie suspecte ou une localisation dans le lobe supérieur peuvent nécessiter un suivi à 12 mois.</li>
+</ul>
+<h2 id="nodules-solides-de-6-8-mm"><a class="header" href="#nodules-solides-de-6-8-mm">Nodules solides de 6-8 mm</a></h2>
+<ul>
+<li>Les nodules solides de 6-8 mm chez les patients à faible risque clinique doivent être suivis initialement à 6-12 mois, en fonction de la taille, de la morphologie et des préférences du patient.</li>
+<li>Si la morphologie est suspecte ou si la stabilité est incertaine, une étude supplémentaire peut être réalisée après 6-12 mois.</li>
+</ul>
+<h2 id="nodules-solides-de-plus-de-8-mm"><a class="header" href="#nodules-solides-de-plus-de-8-mm">Nodules solides de plus de 8 mm</a></h2>
+<ul>
+<li>Pour les nodules solides non calcifiés de plus de 8 mm, un suivi à 3 mois est recommandé, suivi d'un examen combinant la tomographie par émission de positons (TEP) et la tomodensitométrie (TDM), d'un prélèvement tissulaire, ou d'une combinaison de ces options.</li>
+</ul>
+<h2 id="nodules-multiples"><a class="header" href="#nodules-multiples">Nodules multiples</a></h2>
+<ul>
+<li>Pour les nodules solides non calcifiés multiples de moins de 6 mm, aucun suivi systématique n'est recommandé.</li>
+<li>Pour les nodules multiples avec au moins un nodule de 6 mm ou plus, un suivi à environ 3-6 mois est recommandé, suivi éventuellement d'un deuxième examen à 18-24 mois.</li>
+</ul>
+<h2 id="nodules-subsolides"><a class="header" href="#nodules-subsolides">Nodules subsolides</a></h2>
+<ul>
+<li>Pour les nodules subsolides purs de moins de 6 mm, aucun suivi systématique n'est recommandé.</li>
+<li>Pour les nodules subsolides purs de 6 mm ou plus, un suivi à 6-12 mois est recommandé, suivi de scans tous les 2 ans jusqu'à 5 ans.</li>
+</ul>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<ul>
+<li>Ces recommandations sont basées sur des preuves de qualité variable et peuvent être adaptées en fonction des facteurs de risque individuels et des préférences du patient.</li>
+</ul>
+<h1 id="recommandations-pour-le-suivi-des-nodules-pulmonaires-1"><a class="header" href="#recommandations-pour-le-suivi-des-nodules-pulmonaires-1">Recommandations pour le suivi des nodules pulmonaires</a></h1>
+<h2 id="nodules-partiellement-solides"><a class="header" href="#nodules-partiellement-solides">Nodules partiellement solides</a></h2>
+<ul>
+<li>Pour les nodules partiellement solides de 6 mm ou plus avec une composante solide de moins de 6 mm, un suivi est recommandé tous les 3 à 6 mois pendant au moins 5 ans.</li>
+<li>Les nodules partiellement solides ont une forte probabilité de malignité, mais les nodules avec une composante solide de moins de 6 mm sont généralement des adénocarcinomes in situ ou des adénocarcinomes minimalement invasifs plutôt que des adénocarcinomes invasifs.</li>
+<li>Les nodules partiellement solides peuvent également être dus à des infections temporaires et peuvent disparaître après un suivi à court terme.</li>
+<li>Au moins un suivi (3-6 mois) est recommandé pour déterminer la persistance ou la résolution du nodule.</li>
+<li>Pour les lésions persistantes, un suivi annuel pendant 5 ans est recommandé pour évaluer la stabilité de la composante solide.</li>
+</ul>
+<h2 id="nodules-partiellement-solides-de-6-mm-ou-plus"><a class="header" href="#nodules-partiellement-solides-de-6-mm-ou-plus">Nodules partiellement solides de 6 mm ou plus</a></h2>
+<ul>
+<li>Un scanner CT de suivi à court terme (3-6 mois) doit être envisagé pour évaluer la persistance du nodule.</li>
+<li>Pour les nodules avec une morphologie particulièrement suspecte (marges lobulées ou composantes kystiques, composante solide en croissance ou composante solide de plus de 8 mm), une TEP/CT, une biopsie ou une résection sont recommandées.</li>
+<li>Une composante solide de plus de 5 mm est corrélée à une forte probabilité d'invasion locale.</li>
+<li>Un suivi à court terme (3-6 mois) peut être approprié pour les nodules subsolides de moins de 6 mm lorsque le diagnostic est incertain.</li>
+<li>Si la stabilité est établie dans ce délai, des examens de suivi à 2 et 4 ans sont recommandés pour confirmer l'absence de croissance.</li>
+</ul>
+<h2 id="nodules-pulmonaires-subsolides-multiples"><a class="header" href="#nodules-pulmonaires-subsolides-multiples">Nodules pulmonaires subsolides multiples</a></h2>
+<ul>
+<li>Pour les patients avec plusieurs nodules subsolides de moins de 6 mm, il faut envisager des causes infectieuses.</li>
+<li>Si les lésions persistent après un suivi initial de 3 à 6 mois, un suivi à environ 2 et 4 ans peut être envisagé pour confirmer la stabilité, en fonction du contexte clinique.</li>
+<li>Pour les nodules subsolides multiples de 6 mm ou plus, les décisions de prise en charge doivent être basées sur le nodule le plus suspect.</li>
+<li>Un suivi à 3-6 mois est recommandé pour déterminer la persistance ou la résolution des nodules.</li>
+<li>Pour les nodules persistants après 3-6 mois, il faut envisager des adénocarcinomes primaires multiples.</li>
+</ul>
+<h2 id="taille-et-morphologie-des-nodules"><a class="header" href="#taille-et-morphologie-des-nodules">Taille et morphologie des nodules</a></h2>
+<ul>
+<li>La taille des nodules est un facteur déterminant dans la gestion et est divisée en catégories solides, vitreuses et partiellement solides.</li>
+<li>La distinction entre les nodules solides et subsolides n'est pas toujours claire et l'utilisation de critères objectifs, tels que le pourcentage de composante solide, peut être plus fiable.</li>
+<li>La spiculation marginale est associée à la malignité et est un facteur de risque pour le cancer.</li>
+<li>Les cancers du poumon se produisent plus fréquemment dans les lobes supérieurs, avec une prédilection pour le poumon droit.</li>
+<li>La multiplicité des nodules est associée à un risque réduit de cancer par rapport à un seul nodule.</li>
+<li>Le taux de croissance des nodules est pris en compte dans les intervalles de suivi recommandés.</li>
+<li>La présence d'emphysème et de fibrose pulmonaire est un facteur de risque indépendant pour le cancer du poumon.</li>
+</ul>
+<h2 id="autres-facteurs-de-risque"><a class="header" href="#autres-facteurs-de-risque">Autres facteurs de risque</a></h2>
+<ul>
+<li>L'âge, le sexe, la race et les antécédents familiaux sont également des facteurs de risque pour le cancer du poumon.</li>
+<li>Le tabagisme est le principal facteur de risque pour le cancer du poumon, mais d'autres carcinogènes inhalés, tels que l'amiante, l'uranium ou le radon, peuvent également augmenter le risque.</li>
+<li>Les cigarettes électroniques sans fumée sont un produit nouveau et les risques associés ne sont pas encore prouvés.</li>
+</ul>
+<h2 id="estimation-du-risque-et-modèles-de-risque"><a class="header" href="#estimation-du-risque-et-modèles-de-risque">Estimation du risque et modèles de risque</a></h2>
+<h1 id="guidelines-for-nodule-management"><a class="header" href="#guidelines-for-nodule-management">Guidelines for Nodule Management</a></h1>
+<h2 id="introduction-2"><a class="header" href="#introduction-2">Introduction</a></h2>
+<p>These guidelines are used to estimate the risk of malignancy in nodules found in the lungs. Factors such as nodule size, shape, and additional clinical risk factors like smoking, exposure to carcinogens, and family history of lung cancer are considered. Several risk prediction models have been developed to help determine the likelihood of cancer. For these guidelines, risk is assigned based on categories proposed by the American College of Chest Physicians (ACCP). </p>
+<h2 id="low-risk"><a class="header" href="#low-risk">Low Risk</a></h2>
+<p>Low risk corresponds to an estimated risk of cancer of less than 5%. It is associated with young age, less smoking, smaller nodule size, regular margins, and location in an area other than the upper lobe of the lung.</p>
+<h2 id="high-risk"><a class="header" href="#high-risk">High Risk</a></h2>
+<p>High risk includes both the ACCP intermediate-risk (5%-65% risk) and high-risk (&gt;65% risk) categories. It is associated with older age, heavy smoking, larger nodule size, irregular or spiculated margins, and upper lobe location.</p>
+<h2 id="invasive-diagnostic-and-therapeutic-procedures"><a class="header" href="#invasive-diagnostic-and-therapeutic-procedures">Invasive Diagnostic and Therapeutic Procedures</a></h2>
+<p>These guidelines focus on non-invasive management of nodules. Invasive procedures like trans-thoracic needle biopsy, electromagnetic navigation, and endobronchial ultrasonography-guided nodal sampling may be used depending on available resources and expertise. The choice of procedure should be made in a multidisciplinary conference.</p>
+<h2 id="additional-considerations"><a class="header" href="#additional-considerations">Additional Considerations</a></h2>
+<ul>
+<li>Apical Scarring: Pleural and subpleural apical scarring is common and may appear as nodules on CT scans. Certain features can help differentiate scars from other nodules.</li>
+<li>Perifissural Nodules: These are small solid nodules commonly seen near pleural fissures and are thought to be intrapulmonary lymph nodes. Follow-up CT is not recommended for these nodules unless there are specific characteristics indicating a higher risk of malignancy.</li>
+<li>Incidentally Detected Lung Nodules on Incomplete Thoracic CT Scans: For small nodules (&lt;6 mm), no further investigation is recommended. For intermediate-size nodules (6-8 mm), follow-up CT of the complete chest is recommended. Large or suspicious nodules may require a complete thoracic CT examination.</li>
+<li>Partial Thoracic CT Scans for Nodule Follow-up: Partial scans are not recommended due to practical reasons and the possibility of missing important findings.</li>
+</ul>
+<h2 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h2>
+<p>These guidelines are based on the consensus of a multidisciplinary international group of specialists. They provide a systematic and evidence-based approach to the management of incidentally detected lung nodules.</p>
+<h1 id="Évaluation-des-patients-avec-des-nodules-pulmonaires--quand-est-ce-que-cest-un-cancer-du-poumon-"><a class="header" href="#Évaluation-des-patients-avec-des-nodules-pulmonaires--quand-est-ce-que-cest-un-cancer-du-poumon-">Évaluation des patients avec des nodules pulmonaires : quand est-ce que c'est un cancer du poumon ?</a></h1>
+<p>Ce texte présente des études et des recommandations sur l'évaluation des patients présentant des nodules pulmonaires. Les nodules pulmonaires sont des petites masses qui peuvent être trouvées dans les poumons lors d'examens médicaux. Il est important de déterminer si ces nodules sont cancéreux ou non.</p>
+<p>Les études ont montré que certains facteurs peuvent aider à prédire si un nodule est cancéreux ou non. Par exemple, la taille du nodule, sa forme et sa densité peuvent être des indicateurs importants. Les études ont également montré que les nodules qui ont une partie solide sont plus susceptibles d'être cancéreux que ceux qui sont entièrement composés de tissu pulmonaire.</p>
+<p>Pour évaluer les nodules pulmonaires, les médecins peuvent utiliser différentes techniques d'imagerie, comme la tomodensitométrie (CT scan). Ils peuvent également effectuer des biopsies pour prélever un échantillon de tissu du nodule et le tester pour détecter la présence de cellules cancéreuses.</p>
+<p>Il est important de diagnostiquer rapidement les nodules pulmonaires cancéreux, car cela permet de commencer le traitement plus tôt et d'améliorer les chances de guérison. Cependant, il est également important de ne pas surdiagnostiquer les nodules bénins, car cela peut entraîner des procédures médicales inutiles et des inquiétudes pour les patients.</p>
+<p>En conclusion, l'évaluation des nodules pulmonaires est un processus complexe qui nécessite une approche individualisée pour chaque patient. Les médecins utilisent différentes techniques pour déterminer si un nodule est cancéreux ou non, en se basant sur des facteurs tels que la taille, la forme et la densité du nodule. Il est important de diagnostiquer rapidement les nodules cancéreux, mais aussi de ne pas surdiagnostiquer les nodules bénins.</p>
+<h1 id="simplification-du-texte-sur-les-caractéristiques-cliniques-radiologiques-des-nodules-pulmonaires"><a class="header" href="#simplification-du-texte-sur-les-caractéristiques-cliniques-radiologiques-des-nodules-pulmonaires">Simplification du texte sur les caractéristiques cliniques-radiologiques des nodules pulmonaires</a></h1>
+<h2 id="introduction-3"><a class="header" href="#introduction-3">Introduction</a></h2>
+<p>Ce texte parle de la relation entre les caractéristiques cliniques-radiologiques initiales et la croissance des nodules pulmonaires avec une opacité en verre dépoli. Il cite plusieurs études qui ont examiné cette relation.</p>
+<h2 id="les-études-citées"><a class="header" href="#les-études-citées">Les études citées</a></h2>
+<ol>
+<li>Une étude de 2014 a examiné l'association entre les caractéristiques cliniques-radiologiques initiales et la croissance des nodules pulmonaires avec une opacité en verre dépoli.</li>
+<li>Une autre étude de 2011 a discuté si une résection plus petite est une opération plus petite.</li>
+<li>Une étude de 2007 a évalué l'efficacité de la résection thoracoscopique pour le carcinome bronchioloalvéolaire multifocal présentant des opacités en verre dépoli de 20 mm ou moins de diamètre.</li>
+<li>Une étude de 2012 a examiné les implications chirurgicales de la nouvelle classification de l'adénocarcinome de l'IASLC/ATS/ERS.</li>
+<li>Une étude de 2012 a discuté de la prise de décision chez les patients présentant des nodules pulmonaires.</li>
+<li>Une étude de 2012 a examiné la croissance rapide des nodules péri-fissuraux et son lien avec la malignité.</li>
+<li>Une étude de 2010 a examiné les nodules péri-fissuraux observés lors du dépistage du cancer du poumon.</li>
+<li>Une étude de 1996 a évalué la prévalence des ganglions lymphatiques intrapulmonaires et leur apparence sur les scanners CT.</li>
+<li>Une étude de 2015 a discuté des tendances récentes dans l'identification des nodules pulmonaires incidentaux.</li>
+</ol>
+<h2 id="conclusion-2"><a class="header" href="#conclusion-2">Conclusion</a></h2>
+<p>Ces études fournissent des informations sur la relation entre les caractéristiques cliniques-radiologiques initiales et la croissance des nodules pulmonaires avec une opacité en verre dépoli.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>
