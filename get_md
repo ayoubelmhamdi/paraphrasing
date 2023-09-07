@@ -17,7 +17,7 @@ for file in "${mdbook[@]}";do
   mv "$paraphrasingPATH/$file" ./src
 
   echo "- [${file%.md}](./$file)" >> ./src/SUMMARY.md
-  echo "- [${file%.md}](./$file)" >> ./src/README.md
+  # echo "- [${file%.md}](./$file)" >> ./src/README.md
   git add "./src/$file"
 done
 
