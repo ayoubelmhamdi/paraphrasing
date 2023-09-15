@@ -13,3 +13,5 @@ Simplification using LLM
     - [s3-sebihi-dosimetre-138p](./s3-sebihi-dosimetre-138p.md)
     - [s3-sebihi-dosimetrie-radioddiagnostic-72](./s3-sebihi-dosimetrie-radioddiagnostic-72.md)
     - [s3-sebihi-dosimetrie-en-medcine-nucleaire-47p](./s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.md)
+- [PFE]()
+    - [Q&A](./s4-question-and-answer.md)
