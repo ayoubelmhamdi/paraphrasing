@@ -1,0 +1,1179 @@
+<!DOCTYPE HTML>
+<html lang="En" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Q&amp;A - Paraphrasing the Pdfs</title>
+
+
+        <!-- Custom HTML head -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/tavianator.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        
+        <script src="tavianator.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBDQXGZ6R1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EBDQXGZ6R1');
+        </script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/tabbed-code-blocks.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> INTRODUCTION</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Bac</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="bac-seance-1-les-ondes-mecaniques-progressives-8.html"><strong aria-hidden="true">2.1.</strong> seance-1-les-ondes-mecaniques-progressives-8</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Articles</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="2207.14238.html"><strong aria-hidden="true">3.1.</strong> 2207.14238</a></li><li class="chapter-item expanded "><a href="2308.14963.html"><strong aria-hidden="true">3.2.</strong> 2308.14963</a></li><li class="chapter-item expanded "><a href="Nodule-pulmonaire_S-Bennani.html"><strong aria-hidden="true">3.3.</strong> Nodule-pulmonaire_S-Bennani</a></li><li class="chapter-item expanded "><a href="macmahon2017.html"><strong aria-hidden="true">3.4.</strong> macmahon2017</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> s3</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="s3-sebihi-dosimetre-138p.html"><strong aria-hidden="true">4.1.</strong> s3-sebihi-dosimetre-138p</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-radioddiagnostic-72.html"><strong aria-hidden="true">4.2.</strong> s3-sebihi-dosimetrie-radioddiagnostic-72</a></li><li class="chapter-item expanded "><a href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html"><strong aria-hidden="true">4.3.</strong> s3-sebihi-dosimetrie-en-medcine-nucleaire-47p</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> PFE</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="s4-question-and-answer.html" class="active"><strong aria-hidden="true">5.1.</strong> Q&A</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Paraphrasing the Pdfs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ayoubelmhamdi/paraphrasing/tree/master/src/s4-question-and-answer.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="question-and-answer"><a class="header" href="#question-and-answer">QUESTION AND ANSWER</a></h1>
+<hr />
+<h1 id="introduction-gÉnÉrale"><a class="header" href="#introduction-gÉnÉrale">INTRODUCTION GÉNÉRALE.</a></h1>
+<ol start="2">
+<li>Pourquoi la découverte précoce des nodules pulmonaires est-elle importante ?</li>
+</ol>
+<blockquote>
+<p>La découverte précoce des nodules pulmonaires est importante car elle peut considérablement augmenter les chances de survie en cas de cancer du poumon.</p>
+</blockquote>
+<ol start="3">
+<li>Quelles sont les deux principales étapes des algorithmes de détection des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Les deux principales étapes des algorithmes de détection des nodules pulmonaires sont :</p>
+<ul>
+<li>La première étape recherche une grande variété de nodules possibles avec une grande sensibilité, mais génère de nombreux faux positifs.</li>
+<li>La deuxième étape atténue ces faux positifs en utilisant des caractéristiques et des classificateurs améliorés pour améliorer la précision de la détection.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Sur quel ensemble de données avez-vous appliqué un réseau neuronal convolutionnel dans vos recherches sur la détection des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Les chercheurs ont appliqué un réseau neuronal convolutionnel sur l'ensemble de données public LIDC-IDRI/LUNA16, composé de scanners thoraciques de 1018/888 patients évalués par quatre experts médicaux.</p>
+</blockquote>
+<ol start="5">
+<li>Comment avez-vous classé les nodules pulmonaires dans votre étude, et quelle a été la performance de cette classification ?</li>
+</ol>
+<blockquote>
+<p>Dans l'étude, les nodules pulmonaires ont été classés comme probablement normaux ou anormaux à l'aide du <em>LIDC-IDRI</em>/<em>TRPMLN</em> dataset, et les résultats ont montré une performance de classification de nodule, indiquant une capacité à identifier de manière assez précise les nodules cancéreux et non cancéreux.</p>
+</blockquote>
+<h1 id="anatomie-des-nodules-pulmonaires"><a class="header" href="#anatomie-des-nodules-pulmonaires">ANATOMIE DES NODULES PULMONAIRES.</a></h1>
+<ol>
+<li>Qu'est-ce qu'un nodule pulmonaire et pourquoi est-il important de les évaluer ?</li>
+</ol>
+<blockquote>
+<p>Un nodule pulmonaire est une petite masse arrondie qui se forme dans les poumons. Il est important de les évaluer car leur nature (bénigne ou maligne), leur taille, leur croissance et leurs caractéristiques déterminent le traitement approprié.</p>
+</blockquote>
+<ol start="2">
+<li>Quels sont les types de nodules pulmonaires les plus courants, et comment diffèrent-ils les uns des autres ?</li>
+</ol>
+<blockquote>
+<p>Les types de nodules pulmonaires les plus courants sont les nodules infectieux, granulomateux, calcifiés et carcinoïdes. Les nodules infectieux résultent d'infections pulmonaires, les granulomateux sont associés à des inflammations spécifiques, les calcifiés contiennent des dépôts de calcification, et les carcinoïdes proviennent de cellules neuroendocrines dans les poumons.</p>
+</blockquote>
+<ol start="3">
+<li>Quelles sont les causes possibles des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Les nodules pulmonaires peuvent être causés par divers facteurs, notamment les infections pulmonaires, les maladies inflammatoires, les réactions à des substances inhalées, les tumeurs bénignes, les tumeurs malignes (cancer du poumon), les cancers métastatiques, ainsi que des facteurs génétiques et environnementaux.</p>
+</blockquote>
+<ol start="4">
+<li>Pourquoi est-il nécessaire d'effectuer un examen médical détaillé pour diagnostiquer précisément les nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Un examen médical détaillé est nécessaire pour déterminer la nature exacte d'un nodule pulmonaire, car il peut s'agir de diverses conditions médicales. Cela peut inclure des examens d'imagerie, des analyses de sang et parfois une biopsie pour un diagnostic précis.</p>
+</blockquote>
+<ol start="5">
+<li>Quel est le rôle de la surveillance régulière dans l'évaluation des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>La surveillance régulière est importante pour suivre l'évolution des nodules pulmonaires au fil du temps. Elle permet de détecter tout changement dans leur taille, leur forme ou leurs caractéristiques, ce qui peut indiquer la nécessité d'autres mesures, comme une biopsie.</p>
+</blockquote>
+<ol start="6">
+<li>Quelles sont les principales méthodes de traitement des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Les principales méthodes de traitement des nodules pulmonaires incluent la surveillance régulière, la biopsie, le traitement médical, la chirurgie, la radiothérapie, la chimiothérapie, l'immunothérapie et la thérapie photodynamique, en fonction de la nature du nodule et de son éventuelle malignité.</p>
+</blockquote>
+<ol start="7">
+<li>Quels sont les avantages de la surveillance régulière des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>La surveillance régulière permet de suivre l'évolution des nodules pulmonaires au fil du temps, ce qui peut aider à décider si d'autres mesures sont nécessaires, tout en évitant des interventions inutiles chez les patients présentant des nodules bénins.</p>
+</blockquote>
+<ol start="8">
+<li>Comment les nodules pulmonaires peuvent-ils changer au fil du temps ?</li>
+</ol>
+<blockquote>
+<p>Les nodules pulmonaires peuvent changer de taille, de forme ou de caractéristiques au fil du temps, d'où l'importance de la surveillance régulière pour détecter ces changements.</p>
+</blockquote>
+<ol start="9">
+<li>Quelles informations peut fournir l'étude des nodules pulmonaires sur le pronostic d'un patient atteint de cancer du poumon ?</li>
+</ol>
+<blockquote>
+<p>L'étude des nodules pulmonaires peut fournir des informations sur le pronostic d'un patient atteint de cancer du poumon, notamment en ce qui concerne le stade de la maladie et les options thérapeutiques possibles.</p>
+</blockquote>
+<ol start="10">
+<li>Quelles sont les options de traitement possibles pour les nodules pulmonaires malins ?</li>
+</ol>
+<blockquote>
+<p>Les options de traitement des nodules pulmonaires malins peuvent inclure la chirurgie, la radiothérapie, la chimiothérapie, l'immunothérapie et d'autres traitements, en fonction de la nature spécifique du nodule et de l'état du patient.</p>
+</blockquote>
+<ol start="11">
+<li>Comment la classification des nodules pulmonaires est-elle basée sur leurs causes et caractéristiques ?</li>
+</ol>
+<blockquote>
+<p>La classification des nodules pulmonaires se fait en fonction de leurs causes et de leurs caractéristiques, ce qui permet de déterminer le traitement approprié.</p>
+</blockquote>
+<ol start="12">
+<li>Quelles sont les trois régions principales dans le thorax liées à l'anatomie pulmonaire ?</li>
+</ol>
+<blockquote>
+<p>Les trois régions principales dans le thorax liées à l'anatomie pulmonaire sont le médiastin, les cavités pleuropulmonaires et les poumons eux-mêmes.</p>
+</blockquote>
+<ol start="13">
+<li>Quelles sont les caractéristiques externes des poumons en termes de forme, de couleur, de poids, de consistance et de structure ?</li>
+</ol>
+<blockquote>
+<p>Les caractéristiques externes des poumons comprennent leur forme, leur couleur, leur poids, leur consistance et leur structure.</p>
+</blockquote>
+<ol start="14">
+<li>Comment les poumons sont-ils segmentés en lobes et combien de lobes ont-ils chacun ?</li>
+</ol>
+<blockquote>
+<p>Les poumons sont segmentés en lobes, avec trois lobes pour le poumon droit (supérieur, moyen, inférieur) et deux lobes pour le poumon gauche (supérieur, inférieur).</p>
+</blockquote>
+<ol start="15">
+<li>Qu'est-ce que l'unité fonctionnelle des poumons et quel rôle joue-t-elle dans les échanges gazeux ?</li>
+</ol>
+<blockquote>
+<p>L'unité fonctionnelle des poumons est constituée des alvéoles, qui permettent les échanges gazeux entre l'air inspiré et le sang.</p>
+</blockquote>
+<ol start="16">
+<li>Pouvez-vous expliquer la vascularisation du poumon et son rôle dans les échanges gazeux ?</li>
+</ol>
+<blockquote>
+<p>La vascularisation du poumon comprend les artères pulmonaires, les artérioles pulmonaires, les capillaires pulmonaires, les veinules pulmonaires et les veines pulmonaires. Elle assure les échanges gazeux vitaux.</p>
+</blockquote>
+<ol start="17">
+<li>Quelles sont les étapes du diagnostic des maladies pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Le diagnostic des maladies pulmonaires comprend des étapes telles que l'anamnèse, l'examen physique, les tests de la fonction pulmonaire, l'imagerie médicale, les analyses de sang et les biopsies.</p>
+</blockquote>
+<ol start="18">
+<li>Quelles sont les principales causes du cancer du poumon, et comment sont-elles liées aux nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Les principales causes du cancer du poumon sont liées à l'exposition à la cigarette, au tabagisme passif, à l'exposition professionnelle à des substances cancérigènes et à des facteurs génétiques et environnementaux.</p>
+</blockquote>
+<ol start="19">
+<li>Comment la stadification du cancer du poumon est-elle réalisée, et quels sont les stades possibles ?</li>
+</ol>
+<blockquote>
+<p>La stadification du cancer du poumon est basée sur le système TNM (tumeur, ganglions lymphatiques, métastases) et comprend les stades I, II, III et IV, en fonction de l'étendue de la maladie.</p>
+</blockquote>
+<ol start="20">
+<li>Quelles sont les méthodes de traitement du cancer du poumon, et comment sont-elles sélectionnées en fonction de la situation du patient ?</li>
+</ol>
+<blockquote>
+<p>Les méthodes de traitement du cancer du poumon comprennent la chirurgie, la radiothérapie, la chimiothérapie, les thérapies ciblées, l'immunothérapie, la thérapie photodynamique et les soins palliatifs, sélectionnés en fonction du type et du stade du cancer, ainsi que des caractéristiques du patient.</p>
+</blockquote>
+<h1 id="aperÇu-sur-deep-learning"><a class="header" href="#aperÇu-sur-deep-learning">APERÇU SUR DEEP LEARNING.</a></h1>
+<ol>
+<li>Qu'est-ce que l'apprentissage profond et comment se compare-t-il à l'apprentissage traditionnel ?</li>
+</ol>
+<blockquote>
+<p>L'apprentissage profond est une approche d'apprentissage automatique qui utilise des réseaux de neurones profonds pour extraire des caractéristiques complexes à partir des données. Il se distingue de l'apprentissage traditionnel par sa capacité à apprendre des représentations hiérarchiques.</p>
+</blockquote>
+<ol start="2">
+<li>Comment fonctionne la fonction coût dans le contexte de l'apprentissage profond ?</li>
+</ol>
+<blockquote>
+<p>La fonction coût mesure la différence entre les prédictions d'un modèle et les valeurs réelles. Elle est utilisée pour quantifier l'erreur du modèle et guider l'ajustement des paramètres.</p>
+</blockquote>
+<ol start="3">
+<li>Quelle est la fonction principale de la fonction d'optimisation dans l'apprentissage profond ?</li>
+</ol>
+<blockquote>
+<p>La fonction d'optimisation est utilisée pour minimiser la fonction coût en ajustant les paramètres du modèle. Son rôle principal est de trouver les valeurs optimales des paramètres.</p>
+</blockquote>
+<ol start="4">
+<li>Comment l'algorithme de descente de gradient est-il utilisé pour ajuster les poids dans un réseau neuronal ?</li>
+</ol>
+<blockquote>
+<p>L'algorithme de descente de gradient est utilisé pour ajuster les poids des neurones dans un réseau neuronal en minimisant la fonction coût. Il calcule les gradients par rapport aux poids et les met à jour pour réduire l'erreur.</p>
+</blockquote>
+<ol start="5">
+<li>Quelle est la signification de l'erreur quadratique moyenne (E) dans le contexte de l'apprentissage profond ?</li>
+</ol>
+<blockquote>
+<p>L'erreur quadratique moyenne (E) mesure l'écart moyen entre les prédictions du modèle et les valeurs réelles. Plus E est faible, meilleure est la performance du modèle.</p>
+</blockquote>
+<ol start="6">
+<li>Quelles sont les principales fonctions d'activation utilisées dans les réseaux de neurones ?</li>
+</ol>
+<blockquote>
+<p>Les fonctions d'activation, telles que ReLU (Rectified Linear Unit) et sigmoid, introduisent de la non-linéarité dans les neurones, ce qui permet au réseau de capturer des relations complexes entre les données.</p>
+</blockquote>
+<ol start="7">
+<li>Pourquoi est-il important d'utiliser des matrices dans l'apprentissage profond ?</li>
+</ol>
+<blockquote>
+<p>Les matrices sont utilisées pour stocker et mettre à jour les poids des connexions entre les neurones dans un réseau neuronal, facilitant ainsi le calcul des gradients.</p>
+</blockquote>
+<ol start="8">
+<li>Comment transforme-t-on une image en une représentation en vecteur pour l'analyse par un réseau neuronal ?</li>
+</ol>
+<blockquote>
+<p>Pour transformer une image en un vecteur, on peut aplatir la matrice d'images en une seule dimension, créant ainsi un vecteur de pixels.</p>
+</blockquote>
+<ol start="9">
+<li>Quels sont les types de réseaux de neurones couramment utilisés en apprentissage profond ?</li>
+</ol>
+<blockquote>
+<p>Les types de réseaux de neurones couramment utilisés incluent les réseaux de neurones convolutifs (CNN), les réseaux de neurones récurrents (RNN) et les réseaux de neurones profonds (DNN).</p>
+</blockquote>
+<ol start="10">
+<li>Comment les réseaux de neurones sont-ils utilisés dans le domaine de l'imagerie médicale, en particulier pour les scans de poumons ?</li>
+</ol>
+<blockquote>
+<p>Les réseaux de neurones sont utilisés en imagerie médicale pour la segmentation, la classification et la détection de structures d'intérêt, comme les nodules pulmonaires, à partir de scans de poumons.</p>
+</blockquote>
+<ol start="11">
+<li>Quel est le rôle des matrices dans le stockage et la mise à jour des paramètres d'un réseau de neurones ?</li>
+</ol>
+<blockquote>
+<p>Les matrices stockent les poids des connexions synaptiques dans un réseau de neurones, ce qui permet de calculer les activations des neurones lors de la propagation avant et de mettre à jour les poids lors de la rétropropagation.</p>
+</blockquote>
+<ol start="12">
+<li>Comment le Deep Learning est-il appliqué à la détection de nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>Le Deep Learning est appliqué à la détection de nodules pulmonaires en utilisant des réseaux de neurones pour identifier et localiser automatiquement ces anomalies sur des images médicales.</p>
+</blockquote>
+<ol start="13">
+<li>Pourquoi est-il nécessaire de transformer les données d'images en vecteurs avant de les intégrer dans un réseau neuronal ?</li>
+</ol>
+<blockquote>
+<p>La transformation des données d'images en vecteurs permet de les intégrer dans un réseau neuronal, qui peut ensuite apprendre des motifs à partir de ces vecteurs.</p>
+</blockquote>
+<ol start="14">
+<li>Quelle est l'importance de la normalisation des données d'images avant leur analyse par un réseau neuronal ?</li>
+</ol>
+<blockquote>
+<p>La normalisation des données d'images est importante pour réduire la variance des valeurs de pixel, ce qui facilite l'apprentissage efficace d'un réseau neuronal.</p>
+</blockquote>
+<ol start="15">
+<li>Comment le Deep Learning peut-il contribuer à la détection précoce du cancer du poumon ?</li>
+</ol>
+<blockquote>
+<p>Le Deep Learning peut contribuer à la détection précoce du cancer du poumon en identifiant les nodules pulmonaires suspects dans les scans, permettant ainsi un diagnostic précoce.</p>
+</blockquote>
+<ol start="16">
+<li>Quel est l'ensemble de données Luna16 et comment est-il utilisé dans la détection de nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>L'ensemble de données Luna16 est une base de données de scans thoraciques annotés utilisée pour l'évaluation des algorithmes de détection de nodules pulmonaires.</p>
+</blockquote>
+<ol start="17">
+<li>Quelles sont les étapes nécessaires pour opérer sur une image à l'aide de caractéristiques matricielles ?</li>
+</ol>
+<blockquote>
+<p>Les étapes nécessaires pour opérer sur une image à l'aide de caractéristiques matricielles incluent la prétraitement de l'image, l'extraction de caractéristiques et l'analyse par un réseau neuronal.</p>
+</blockquote>
+<ol start="18">
+<li>Comment les réseaux neuronaux peuvent-ils extraire et interpréter des motifs complexes dans les données d'images ?</li>
+</ol>
+<blockquote>
+<p>Les réseaux neuronaux peuvent extraire des motifs complexes en utilisant des couches de neurones pour capturer des caractéristiques de bas niveau et de haut niveau dans les données d'images.</p>
+</blockquote>
+<ol start="19">
+<li>Comment le Deep Learning peut-il être utilisé pour classer les nodules pulmonaires comme normaux ou anormaux ?</li>
+</ol>
+<blockquote>
+<p>Le Deep Learning peut être utilisé pour classer les nodules pulmonaires comme normaux ou anormaux en apprenant à partir des caractéristiques extraites des scans de poumons.</p>
+</blockquote>
+<ol start="20">
+<li>Quels sont les avantages potentiels de l'utilisation de l'ensemble de données LIDC-IDRI dans la détection des nodules pulmonaires ?</li>
+</ol>
+<blockquote>
+<p>L'ensemble de données LIDC-IDRI est une ressource importante pour la détection de nodules pulmonaires, car il contient des scans de poumons annotés qui peuvent être utilisés pour l'entraînement et l'évaluation des modèles.</p>
+</blockquote>
+<h1 id="detection-et-classification-des-nodules-pulmonaires-À-laide-du-deep-learning"><a class="header" href="#detection-et-classification-des-nodules-pulmonaires-À-laide-du-deep-learning">DETECTION ET CLASSIFICATION DES NODULES PULMONAIRES À L'AIDE DU DEEP LEARNING</a></h1>
+<h2 id="materiel"><a class="header" href="#materiel">MATERIEL</a></h2>
+<ol>
+<li>Quelle est l'importance de la détection précoce des nodules pulmonaires dans le contexte du cancer du poumon?</li>
+</ol>
+<blockquote>
+<p>La détection précoce des nodules pulmonaires peut considérablement augmenter les taux de survie et le succès du traitement pour les individus atteints de cancer du poumon.</p>
+</blockquote>
+<ol start="2">
+<li>Pourquoi la détection et la classification des nodules pulmonaires sont-elles un défi complexe?</li>
+</ol>
+<blockquote>
+<p>La détection et la classification des nodules pulmonaires sont un défi en raison de leur taille, forme, emplacement et caractéristiques physiques variables.</p>
+</blockquote>
+<ol start="3">
+<li>Comment les systèmes de détection assistée par ordinateur (CAO) peuvent-ils aider les radiologues dans la détection des nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Les systèmes CAO peuvent aider les radiologues à identifier et à caractériser les nodules en fonction de leur taille, forme, évolution et risque de malignité.</p>
+</blockquote>
+<ol start="4">
+<li>Quel est le rôle du deep learning dans l'amélioration de la prise en charge des nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Le deep learning permet d'apprendre à partir de grandes quantités de données et de réaliser des tâches complexes comme la classification ou la segmentation d'images.</p>
+</blockquote>
+<ol start="5">
+<li>Quel est le nom du dataset utilisé dans cette étude pour l'annotation des scans thoraciques?</li>
+</ol>
+<blockquote>
+<p>Le dataset utilisé pour l'annotation des scanners thoraciques est <strong>LIDC-IDRI</strong>.</p>
+</blockquote>
+<ol start="6">
+<li>Combien de scanners thoraciques sont annotés dans le dataset LIDC-IDRI?</li>
+</ol>
+<blockquote>
+<p>1018 scanners thoraciques sont annotés dans le dataset LIDC-IDRI.</p>
+</blockquote>
+<ol start="7">
+<li>Comment sont décrits les nodules pulmonaires dans les fichiers XML du dataset LIDC-IDRI?</li>
+</ol>
+<blockquote>
+<p>Chaque nodule pulmonaire est décrit par un fichier XML qui contient son identifiant, ses caractéristiques et sa région d'intérêt.</p>
+</blockquote>
+<ol start="8">
+<li>Quels sont les attributs clés fournis dans le fichier XML d'un nodule pulmonaire?</li>
+</ol>
+<blockquote>
+<p>Les attributs clés du fichier XML d'un nodule pulmonaire incluent : l'identifiant, la subtilité, la structure interne, la calcification, la sphéricité, la marge, la lobulation, la spiculation, la texture, et le risque de malignité.</p>
+</blockquote>
+<ol start="9">
+<li>Qu'est-ce que le &quot;risque de malignité&quot; d'un nodule pulmonaire, et pourquoi est-il important?</li>
+</ol>
+<blockquote>
+<p>Le &quot;risque de malignité&quot; est une estimation de la probabilité qu'un nodule soit cancéreux ou non.</p>
+</blockquote>
+<ol start="10">
+<li>Quels sont les avantages de l'utilisation de réseaux de neurones profonds dans cette étude?</li>
+</ol>
+<blockquote>
+<p>Les réseaux de neurones profonds analysent les images et fournissent une classification automatique des nodules.</p>
+</blockquote>
+<ol start="11">
+<li>Quel est le nom du dataset utilisé pour entraîner et évaluer le modèle de classification du type de nodule?</li>
+</ol>
+<blockquote>
+<p>Le dataset <strong>LUNA16</strong> a été utilisé pour entraîner et évaluer le modèle de classification du type de nodule.</p>
+</blockquote>
+<ol start="12">
+<li>Comment sont mesurées les performances des modèles de classification?</li>
+</ol>
+<blockquote>
+<p>Les performances des modèles de classification ont été mesurées en utilisant l'exactitude, la précision, la sensibilité et le &quot;F1-score&quot;.</p>
+</blockquote>
+<ol start="13">
+<li>Comment le dataset LUNA16 est-il différent du dataset LIDC-IDRI?</li>
+</ol>
+<blockquote>
+<p>Le dataset LUNA16 est un sous-ensemble du dataset LIDC-IDRI.</p>
+</blockquote>
+<ol start="14">
+<li>Comment le dataset TRPMLN a-t-il été créé à partir du dataset LIDC-IDRI?</li>
+</ol>
+<blockquote>
+<p>Le dataset TRPMLN a été créé en filtrant les scans du LIDC-IDRI en fonction d'un score moyen de malignité, et en enregistrant les données pertinentes dans un fichier CSV et en images TIFF.</p>
+</blockquote>
+<ol start="15">
+<li>Comment le risque de malignité des nodules pulmonaires est-il approximé dans cette étude?</li>
+</ol>
+<blockquote>
+<p>Le risque de malignité des nodules pulmonaires est approximé en se basant sur les annotations de quatre radiologues experts.</p>
+</blockquote>
+<ol start="16">
+<li>Combien d'époques ont été utilisées pour l'entraînement du modèle de détection du type de nodule?</li>
+</ol>
+<blockquote>
+<p>100 époques ont été utilisées pour l'entraînement du modèle de détection du type de nodule.</p>
+</blockquote>
+<ol start="17">
+<li>Quelle fonction de perte a été utilisée lors de l'entraînement du modèle de détection du type de nodule?</li>
+</ol>
+<blockquote>
+<p>La fonction de perte d'entropie croisée binaire a été utilisée lors de l'entraînement du modèle de détection du type de nodule.</p>
+</blockquote>
+<ol start="18">
+<li>Combien de nodules de classe 1 ont été utilisés dans l'ensemble d'entraînement du modèle de détection du type de nodule?</li>
+</ol>
+<blockquote>
+<p>2526 nodules de classe 1 ont été utilisés dans l'ensemble d'entraînement du modèle de détection du type de nodule.</p>
+</blockquote>
+<ol start="19">
+<li>Quelle est la taille des nodules recadrés détectés par le modèle de détection du type de nodule?</li>
+</ol>
+<blockquote>
+<p>Les nodules recadrés détectés sont de taille 64 × 64 × 1.</p>
+</blockquote>
+<ol start="20">
+<li>Quel optimiseur a été utilisé lors de l'entraînement du modèle de détection du risque de malignité des nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>L'optimiseur Adam a été utilisé lors de l'entraînement du modèle de détection du risque de malignité des nodules pulmonaires.</p>
+</blockquote>
+<h2 id="résultats"><a class="header" href="#résultats">Résultats.</a></h2>
+<ol>
+<li>Quelle métrique a été utilisée pour évaluer la performance du modèle de détection de nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Quelle métrique a été utilisée pour évaluer la performance du modèle de détection de nodules pulmonaires?</p>
+<ul>
+<li>La métrique utilisée pour évaluer la performance du modèle de détection de nodules pulmonaires est l'<strong>exactitude</strong>.</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>Quelle est la différence entre l'exactitude et l'exactitude de validation?</li>
+</ol>
+<blockquote>
+<p>Quelle est la différence entre l'exactitude et l'exactitude de validation?</p>
+<ul>
+<li>L'<strong>exactitude</strong> mesure la capacité du modèle à prédire correctement les résultats sur les données d'entraînement, tandis que l'<strong>exactitude de validation</strong> mesure la capacité du modèle à généraliser ses prédictions à de nouvelles données inédites, c'est-à-dire les données de validation.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>À quoi sert la matrice de confusion dans l'évaluation des performances du modèle?</li>
+</ol>
+<blockquote>
+<p>À quoi sert la matrice de confusion dans l'évaluation des performances du modèle?</p>
+<ul>
+<li>La matrice de confusion permet de calculer des métriques telles que la <strong>précision</strong>, la <strong>sensibilité (recall)</strong> et le <strong>F1-Score</strong> pour évaluer les performances du modèle en termes de détection de nodules pulmonaires.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Comment calcule-t-on la précision d'un modèle de détection de nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Comment calcule-t-on la précision d'un modèle de détection de nodules pulmonaires?</p>
+<ul>
+<li>La précision est calculée en divisant le nombre de vrais positifs (VP) par la somme des vrais positifs (VP) et des faux positifs (FP) : précision = VP / (VP + FP).</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>Quelle est la signification de la sensibilité (recall) dans le contexte de la détection de nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Quelle est la signification de la sensibilité (recall) dans le contexte de la détection de nodules pulmonaires?</p>
+<ul>
+<li>La sensibilité (recall) représente la capacité du modèle à identifier correctement la majorité des cas positifs réels (nodules pulmonaires) par rapport à l'ensemble des cas positifs réels : sensibilité = VP / (VP + FN).</li>
+</ul>
+</blockquote>
+<ol start="6">
+<li>Comment est calculé le F1-Score?</li>
+</ol>
+<blockquote>
+<p>Comment est calculé le F1-Score?</p>
+<ul>
+<li>Le F1-Score est calculé comme la moyenne harmonique de la précision et de la sensibilité, ce qui donne une seule mesure qui équilibre ces deux métriques.</li>
+</ul>
+</blockquote>
+<ol start="7">
+<li>Quelle est la performance initiale du modèle 1 sur LUNA16 en termes d'exactitude?</li>
+</ol>
+<blockquote>
+<p>Quelle est la performance initiale du modèle 1 sur LUNA16 en termes d'exactitude?</p>
+<ul>
+<li>La performance initiale du modèle 1 sur LUNA16 est d'environ 64 % en termes d'exactitude.</li>
+</ul>
+</blockquote>
+<ol start="8">
+<li>Quelle tendance observe-t-on dans l'exactitude de validation du modèle 1 sur LUNA16?</li>
+</ol>
+<blockquote>
+<p>Quelle tendance observe-t-on dans l'exactitude de validation du modèle 1 sur LUNA16?</p>
+<ul>
+<li>La tendance montre que l'exactitude de validation du modèle 1 sur LUNA16 augmente progressivement tout au long des étapes d'apprentissage, passant de 64 % à plus de 89 %.</li>
+</ul>
+</blockquote>
+<ol start="9">
+<li>Comment la performance du modèle 2 sur TRPMLN évolue-t-elle au fil des époques?</li>
+</ol>
+<blockquote>
+<p>Comment la performance du modèle 2 sur TRPMLN évolue-t-elle au fil des époques?</p>
+<ul>
+<li>La performance du modèle 2 sur TRPMLN s'améliore progressivement au fil des époques, atteignant une précision d'entraînement de 100 % à la 60ème époque.</li>
+</ul>
+</blockquote>
+<ol start="10">
+<li>À quel moment le modèle 2 atteint-il une précision d'entraînement de 100%?</li>
+</ol>
+<blockquote>
+<p>À quel moment le modèle 2 atteint-il une précision d'entraînement de 100%?</p>
+<ul>
+<li>Le modèle 2 atteint une précision d'entraînement de 100 % à la 60ème époque.</li>
+</ul>
+</blockquote>
+<ol start="11">
+<li>Quelle est la performance de la exactitude de validation du modèle 2 sur TRPMLN par rapport à la précision d'entraînement?</li>
+</ol>
+<blockquote>
+<p>Quelle est la performance de la exactitude de validation du modèle 2 sur TRPMLN par rapport à la précision d'entraînement?</p>
+<ul>
+<li>La exactitude de validation du modèle 2 sur TRPMLN reste plus faible que la précision d'entraînement, fluctuant autour de 50,63 % et atteignant un pic d'environ 69,43 %, mais ne se rapprochant jamais de la précision d'entraînement.</li>
+</ul>
+</blockquote>
+<ol start="12">
+<li>Qu'est-ce que le surajustement (overfitting) d'un modèle?</li>
+</ol>
+<blockquote>
+<p>Qu'est-ce que le surajustement (overfitting) d'un modèle?</p>
+<ul>
+<li>Le surajustement (overfitting) d'un modèle se produit lorsque le modèle a trop bien appris les données d'entraînement, y compris leur bruit et leurs valeurs aberrantes, ce qui le rend peu performant sur de nouvelles données invisibles.</li>
+</ul>
+</blockquote>
+<ol start="13">
+<li>Pourquoi le overfitting est-il problématique dans le contexte de la détection de nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p>Pourquoi le overfitting est-il problématique dans le contexte de la détection de nodules pulmonaires?</p>
+<ul>
+<li>Le overfitting est problématique car il peut entraîner une performance médiocre du modèle sur de nouvelles données de détection de nodules pulmonaires, ce qui est essentiel pour un diagnostic précis.</li>
+</ul>
+</blockquote>
+<ol start="14">
+<li>Quelles sont les implications des fluctuations de la exactitude de validation?</li>
+</ol>
+<blockquote>
+<p>Quelles sont les implications des fluctuations de la exactitude de validation?</p>
+<ul>
+<li>Les fluctuations de la exactitude de validation suggèrent que le modèle peut être instable ou que l'ensemble de validation n'est peut-être pas suffisamment représentatif.</li>
+</ul>
+</blockquote>
+<ol start="15">
+<li>Comment compare-t-on la performance de votre modèle de classification des nodules par rapport à d'autres modèles?</li>
+</ol>
+<blockquote>
+<p>Comment compare-t-on la performance de votre modèle de classification des nodules par rapport à d'autres modèles?</p>
+<ul>
+<li>La comparaison montre que votre modèle de classification des nodules est performant de manière compétente dans l'identification des deux classes, mais il peut être moins performant par rapport à la détection des nodules malins par rapport à d'autres modèles.</li>
+</ul>
+</blockquote>
+<ol start="16">
+<li>Pourquoi le modèle a-t-il tendance à identifier la classe 0 plutôt que la classe 1?</li>
+</ol>
+<blockquote>
+<p>Pourquoi le modèle a-t-il tendance à identifier la classe 0 plutôt que la classe 1?</p>
+<ul>
+<li>Plusieurs facteurs peuvent expliquer cette tendance, notamment un déséquilibre de classe et des caractéristiques spécifiques des données.</li>
+</ul>
+</blockquote>
+<ol start="17">
+<li>Quelles sont les suggestions pour améliorer la performance du modèle dans la détection de nodules malins?</li>
+</ol>
+<blockquote>
+<p>Quelles sont les suggestions pour améliorer la performance du modèle dans la détection de nodules malins?</p>
+<ul>
+<li>Les suggestions incluent le renforcement de la présence de la classe 1, l'utilisation de techniques d'équilibrage des classes et l'exploration de techniques d'optimisation du modèle.</li>
+</ul>
+</blockquote>
+<ol start="18">
+<li>Quelles sont les variations de caractéristiques entre les classes qui peuvent influencer les taux de détection?</li>
+</ol>
+<blockquote>
+<p>Quelles sont les variations de caractéristiques entre les classes qui peuvent influencer les taux de détection?</p>
+<ul>
+<li>Les variations de caractéristiques entre les classes peuvent être dues à des différences de taille, de forme et d'emplacement des nodules pulmonaires.</li>
+</ul>
+</blockquote>
+<ol start="19">
+<li>Quelles solutions sont proposées pour résoudre le problème de déséquilibre de classe dans l'ensemble de données?</li>
+</ol>
+<blockquote>
+<p>Quelles solutions sont proposées pour résoudre le problème de déséquilibre de classe dans l'ensemble de données?</p>
+<ul>
+<li>Les solutions proposées incluent l'augmentation du nombre d'échantillons malins, l'utilisation de techniques d'équilibrage des classes et l'exploration de techniques de prétraitement des images.</li>
+</ul>
+</blockquote>
+<ol start="20">
+<li>Quel est l'objectif futur de votre travail en termes de détection et de classification des nodules pulmonaires?
+Ces questions visent à évaluer la compréhension du rapport sur la détection et la classification des nodules pulmonaires.</li>
+</ol>
+<blockquote>
+<p>Quel est l'objectif futur de votre travail en termes de détection et de classification des nodules pulmonaires?</p>
+<ul>
+<li>L'objectif futur est d'améliorer la performance du modèle pour la classification des sous-types de nodules pulmonaires et d'explorer différentes stratégies d'entraînement pour résoudre les problèmes identifiés dans l'étude.</li>
+</ul>
+</blockquote>
+<h1 id="annexe-1"><a class="header" href="#annexe-1">ANNEXE 1.</a></h1>
+<ol>
+<li>Quelle bibliothèque est incluse pour effectuer des opérations mathématiques dans ce code source en C?</li>
+</ol>
+<blockquote>
+<p>Quelle bibliothèque est incluse pour effectuer des opérations mathématiques dans ce code source en C?</p>
+<ul>
+<li>Réponse : La bibliothèque <code>math.h</code> est incluse pour effectuer des opérations mathématiques.</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>Combien d'éléments de données d'entraînement sont présents dans le tableau <code>td</code>?</li>
+</ol>
+<blockquote>
+<p>Combien d'éléments de données d'entraînement sont présents dans le tableau <code>td</code>?</p>
+<ul>
+<li>Réponse : Il y a 8 éléments de données d'entraînement dans le tableau <code>td</code>.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>Comment est défini le taux d'apprentissage (learning rate) dans ce code source?</li>
+</ol>
+<blockquote>
+<p>Comment est défini le taux d'apprentissage (learning rate) dans ce code source?</p>
+<ul>
+<li>Réponse : Le taux d'apprentissage est défini avec la constante <code>ALPHA</code>, qui a une valeur de 0.00001.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Combien d'itérations sont spécifiées pour l'apprentissage (nombre d'époques)?</li>
+</ol>
+<blockquote>
+<p>Combien d'itérations sont spécifiées pour l'apprentissage (nombre d'époques)?</p>
+<ul>
+<li>Réponse : Le nombre d'itérations (époques) spécifié pour l'apprentissage est de 100 000, comme indiqué dans la constante <code>EPOCS</code>.</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>Comment est calculée l'erreur (coût) dans la fonction <code>cost</code>?</li>
+</ol>
+<blockquote>
+<p>Comment est calculée l'erreur (coût) dans la fonction <code>cost</code>?</p>
+<ul>
+<li>Réponse : L'erreur (coût) est calculée en calculant la somme des carrés des différences entre les valeurs prédites et les valeurs réelles, puis en divisant cette somme par le nombre d'éléments d'entraînement (N).</li>
+</ul>
+</blockquote>
+<ol start="6">
+<li>Quelles sont les variables utilisées pour représenter le poids et le biais dans ce modèle?</li>
+</ol>
+<blockquote>
+<p>Quelles sont les variables utilisées pour représenter le poids et le biais dans ce modèle?</p>
+<ul>
+<li>Réponse : Les variables <code>w</code> et <code>b</code> représentent respectivement le poids et le biais dans ce modèle.</li>
+</ul>
+</blockquote>
+<ol start="7">
+<li>Comment sont calculées les dérivées partielles par rapport au poids et au biais dans la fonction <code>gradient_descent</code>?</li>
+</ol>
+<blockquote>
+<p>Comment sont calculées les dérivées partielles par rapport au poids et au biais dans la fonction <code>gradient_descent</code>?</p>
+<ul>
+<li>Réponse : Les dérivées partielles par rapport au poids et au biais sont calculées en utilisant des boucles pour parcourir les données d'entraînement et en accumulant les dérivées partielles pour chaque exemple.</li>
+</ul>
+</blockquote>
+<ol start="8">
+<li>Comment sont mises à jour les valeurs du poids et du biais dans la fonction <code>gradient_descent</code>?</li>
+</ol>
+<blockquote>
+<p>Comment sont mises à jour les valeurs du poids et du biais dans la fonction <code>gradient_descent</code>?</p>
+<ul>
+<li>Réponse : Les valeurs du poids (<code>w</code>) et du biais (<code>b</code>) sont mises à jour en soustrayant le produit du taux d'apprentissage (<code>ALPHA</code>) et des dérivées partielles calculées dans la fonction <code>gradient_descent</code>.</li>
+</ul>
+</blockquote>
+<ol start="9">
+<li>Quelle est la fonction principale qui effectue l'entraînement du neurone?</li>
+</ol>
+<blockquote>
+<p>Quelle est la fonction principale qui effectue l'entraînement du neurone?</p>
+<ul>
+<li>Réponse : La fonction principale qui effectue l'entraînement du neurone est <code>train</code>.</li>
+</ul>
+</blockquote>
+<ol start="10">
+<li>À quelle fréquence les informations sur l'itération et le coût sont-elles affichées lors de l'entraînement?</li>
+</ol>
+<blockquote>
+<p>À quelle fréquence les informations sur l'itération et le coût sont-elles affichées lors de l'entraînement?</p>
+<ul>
+<li>Réponse : Les informations sur l'itération et le coût sont affichées tous les 101 000 itérations.</li>
+</ul>
+</blockquote>
+<ol start="11">
+<li>Comment sont initialisées les valeurs du poids et du biais au début de l'entraînement?</li>
+</ol>
+<blockquote>
+<p>Comment sont initialisées les valeurs du poids et du biais au début de l'entraînement?</p>
+<ul>
+<li>Réponse : Les valeurs du poids et du biais sont initialisées de manière aléatoire en utilisant <code>rand()</code> et <code>RAND_MAX</code>.</li>
+</ul>
+</blockquote>
+<ol start="12">
+<li>Quelles sont les valeurs finales du poids et du biais après l'entraînement?</li>
+</ol>
+<blockquote>
+<p>Quelles sont les valeurs finales du poids et du biais après l'entraînement?</p>
+<ul>
+<li>Réponse : Les valeurs finales du poids (<code>w</code>) et du biais (<code>b</code>) après l'entraînement sont respectivement environ 1.801169 et 31.883127.</li>
+</ul>
+</blockquote>
+<ol start="13">
+<li>Quelle température en degrés Celsius est utilisée pour tester le modèle après l'entraînement?</li>
+</ol>
+<blockquote>
+<p>Quelle température en degrés Celsius est utilisée pour tester le modèle après l'entraînement?</p>
+<ul>
+<li>Réponse : Le modèle est testé avec une température de 50 degrés Celsius (<code>x_new = 50</code>).</li>
+</ul>
+</blockquote>
+<ol start="14">
+<li>Quelle est la température en Fahrenheit correspondant à 50 degrés Celsius?</li>
+</ol>
+<blockquote>
+<p>Quelle est la température en Fahrenheit correspondant à 50 degrés Celsius?</p>
+<ul>
+<li>Réponse : La température en Fahrenheit correspondant à 50 degrés Celsius est de 122 degrés Fahrenheit.</li>
+</ul>
+</blockquote>
+<ol start="15">
+<li>Quelle est la température en Fahrenheit prédite par le modèle pour 50 degrés Celsius?</li>
+</ol>
+<blockquote>
+<p>Quelle est la température en Fahrenheit prédite par le modèle pour 50 degrés Celsius?</p>
+<ul>
+<li>Réponse : Le modèle prédit une température en Fahrenheit d'environ 121.94 degrés Fahrenheit pour 50 degrés Celsius.</li>
+</ul>
+</blockquote>
+<ol start="16">
+<li>Quelle est la différence entre la température en Fahrenheit attendue et la température en Fahrenheit prédite pour 50 degrés Celsius?</li>
+</ol>
+<blockquote>
+<p>Quelle est la différence entre la température en Fahrenheit attendue et la température en Fahrenheit prédite pour 50 degrés Celsius?</p>
+<ul>
+<li>Réponse : La différence est d'environ 0.06 degré Fahrenheit.</li>
+</ul>
+</blockquote>
+<ol start="17">
+<li>À quelle fréquence les informations sur l'itération et le coût sont affichées pendant l'entraînement?</li>
+</ol>
+<blockquote>
+<p>À quelle fréquence les informations sur l'itération et le coût sont affichées pendant l'entraînement?</p>
+<ul>
+<li>Réponse : Les informations sur l'itération et le coût sont affichées tous les 101 000 itérations.</li>
+</ul>
+</blockquote>
+<ol start="18">
+<li>Comment sont initialisées les valeurs du poids et du biais au début de l'entraînement?</li>
+</ol>
+<blockquote>
+<p>Comment sont initialisées les valeurs du poids et du biais au début de l'entraînement?</p>
+<ul>
+<li>Réponse : Les valeurs du poids et du biais sont initialisées de manière aléatoire en utilisant <code>rand()</code> et <code>RAND_MAX</code>.</li>
+</ul>
+</blockquote>
+<ol start="19">
+<li>Quelle est la fonction principale qui effectue l'entraînement du neurone?</li>
+</ol>
+<blockquote>
+<p>Quelle est la fonction principale qui effectue l'entraînement du neurone?</p>
+<ul>
+<li>Réponse : La fonction principale qui effectue l'entraînement du neurone est <code>train</code>.</li>
+</ul>
+</blockquote>
+<ol start="20">
+<li>Quelle est la fonction de coût utilisée pour évaluer les performances du modèle pendant l'entraînement?</li>
+</ol>
+<blockquote>
+<p>Quelle est la fonction de coût utilisée pour évaluer les performances du modèle pendant l'entraînement?</p>
+<ul>
+<li>Réponse : La fonction de coût utilisée est la fonction de coût quadratique moyenne (mean squared error), calculée dans la fonction <code>cost</code>.</li>
+</ul>
+</blockquote>
+<h1 id="annexe-2"><a class="header" href="#annexe-2">ANNEXE 2.</a></h1>
+<ol>
+<li>Quel est le but principal du script Python fourni?</li>
+</ol>
+<blockquote>
+<p><strong>Quel est le but principal du script Python fourni?</strong></p>
+<ul>
+<li>Le but principal du script Python est de générer un ensemble de données appelé &quot;TRPMLN&quot; à partir de scans pulmonaires du jeu de données LIDC-IDRI. Cet ensemble de données est destiné à la détection et à la classification des nodules pulmonaires.</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>Quelle bibliothèque est utilisée pour interagir avec le jeu de données LIDC-IDRI?</li>
+</ol>
+<blockquote>
+<p><strong>Quelle bibliothèque est utilisée pour interagir avec le jeu de données LIDC-IDRI?</strong></p>
+<ul>
+<li>Le script utilise la bibliothèque &quot;pylidc&quot; pour interagir avec le jeu de données LIDC-IDRI.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>Quels sont les critères de sélection des scans pulmonaires dans ce script?</li>
+</ol>
+<blockquote>
+<p><strong>Quels sont les critères de sélection des scans pulmonaires dans ce script?</strong></p>
+<ul>
+<li>Les scans pulmonaires sont sélectionnés en filtrant ceux dont l'épaisseur de coupe (slice_thickness) est inférieure ou égale à 3 et dont l'espacement entre les pixels (pixel_spacing) est inférieur ou égal à 1.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Comment le script détermine-t-il si un nodule est cancéreux ou non?</li>
+</ol>
+<blockquote>
+<p><strong>Comment le script détermine-t-il si un nodule est cancéreux ou non?</strong></p>
+<ul>
+<li>Le script calcule la malignité moyenne des annotations associées à un nodule. Si la malignité moyenne est supérieure ou égale à 3, le nodule est classé comme cancéreux, sinon il est considéré comme normal.</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>Quelle est la méthode utilisée pour extraire les régions d'intérêt (ROIs) des nodules pulmonaires?</li>
+</ol>
+<blockquote>
+<p><strong>Quelle est la méthode utilisée pour extraire les régions d'intérêt (ROIs) des nodules pulmonaires?</strong></p>
+<ul>
+<li>Le script extrait les ROIs en définissant une boîte englobante (bbox) autour des annotations de nodules pulmonaires avec un certain padding, puis il récupère les images de chaque région délimitée par la bbox.</li>
+</ul>
+</blockquote>
+<ol start="6">
+<li>Quelles informations sont stockées dans le fichier CSV généré par le script?</li>
+</ol>
+<blockquote>
+<p><strong>Quelles informations sont stockées dans le fichier CSV généré par le script?</strong></p>
+<ul>
+<li>Le fichier CSV généré par le script contient deux colonnes : &quot;roi_name&quot; qui contient le nom du fichier ROI, et &quot;cancer&quot; qui indique si le nodule est cancéreux (1) ou non (0).</li>
+</ul>
+</blockquote>
+<ol start="7">
+<li>Comment le script gère-t-il la normalisation des images ROI?</li>
+</ol>
+<blockquote>
+<p><strong>Comment le script gère-t-il la normalisation des images ROI?</strong></p>
+<ul>
+<li>Le script utilise la fonction <code>cv2.normalize</code> pour normaliser les images ROI, les redimensionnant dans la plage de valeurs de 0 à 255 pour des images en niveaux de gris 8 bits.</li>
+</ul>
+</blockquote>
+<ol start="8">
+<li>Quels paramètres sont utilisés pour définir la plage de valeurs des images ROI normalisées?</li>
+</ol>
+<blockquote>
+<p><strong>Quels paramètres sont utilisés pour définir la plage de valeurs des images ROI normalisées?</strong></p>
+<ul>
+<li>Les paramètres utilisés pour normaliser les images ROI sont : 0 (minimum) et 255 (maximum).</li>
+</ul>
+</blockquote>
+<ol start="9">
+<li>Pourquoi le script effectue-t-il un nettoyage de la mémoire (RAM) toutes les 10 itérations?</li>
+</ol>
+<blockquote>
+<p><strong>Pourquoi le script effectue-t-il un nettoyage de la mémoire (RAM) toutes les 10 itérations?</strong></p>
+<ul>
+<li>Le script effectue un nettoyage de la mémoire (RAM) toutes les 10 itérations pour libérer la mémoire utilisée par les données temporaires, ce qui aide à prévenir les problèmes de mémoire lors du traitement d'un grand nombre d'images.</li>
+</ul>
+</blockquote>
+<ol start="10">
+<li>Quelle est la signification du nom de fichier généré pour chaque ROI?</li>
+</ol>
+<blockquote>
+<p><strong>Quelle est la signification du nom de fichier généré pour chaque ROI?</strong></p>
+<ul>
+<li>Le nom de fichier généré pour chaque ROI contient des informations sur la nature du nodule (cancéreux ou normal), le patient, le scan et l'annotation.</li>
+</ul>
+</blockquote>
+<ol start="11">
+<li>Quelle est la principale étape de prétraitement effectuée sur les images ROI avant de les enregistrer?</li>
+</ol>
+<blockquote>
+<p><strong>Quelle est la principale étape de prétraitement effectuée sur les images ROI avant de les enregistrer?</strong></p>
+<ul>
+<li>La principale étape de prétraitement consiste à normaliser les images ROI pour qu'elles soient dans la plage de valeurs de 0 à 255.</li>
+</ul>
+</blockquote>
+<ol start="12">
+<li>Comment le script définit-il si un nodule est malin ou bénin?</li>
+</ol>
+<blockquote>
+<p><strong>Comment le script définit-il si un nodule est malin ou bénin?</strong></p>
+<ul>
+<li>Un nodule est considéré comme malin si la malignité moyenne de ses annotations est supérieure ou égale à 3, sinon il est considéré comme bénin.</li>
+</ul>
+</blockquote>
+<ol start="13">
+<li>Pourquoi est-il important de vérifier si le répertoire spécifié pour le jeu de données LIDC-IDRI existe?</li>
+</ol>
+<blockquote>
+<p><strong>Pourquoi est-il important de vérifier si le répertoire spécifié pour le jeu de données LIDC-IDRI existe?</strong></p>
+<ul>
+<li>Il est important de vérifier si le répertoire spécifié existe pour s'assurer que le script peut accéder au jeu de données LIDC-IDRI avant de commencer le traitement.</li>
+</ul>
+</blockquote>
+<ol start="14">
+<li>Quels sont les avantages de l'utilisation de la bibliothèque pylidc pour ce projet?</li>
+</ol>
+<blockquote>
+<p><strong>Quels sont les avantages de l'utilisation de la bibliothèque pylidc pour ce projet?</strong></p>
+<ul>
+<li>La bibliothèque pylidc permet d'accéder facilement aux données du jeu de données LIDC-IDRI, de gérer les annotations de nodules pulmonaires et de travailler avec les scans pulmonaires de manière efficace.</li>
+</ul>
+</blockquote>
+<ol start="15">
+<li>Comment le script détermine-t-il le nom du fichier de sortie pour chaque ROI?</li>
+</ol>
+<blockquote>
+<p><strong>Comment le script détermine-t-il le nom du fichier de sortie pour chaque ROI?</strong></p>
+<ul>
+<li>Le nom du fichier de sortie pour chaque ROI est déterminé en fonction de la nature du nodule (cancéreux ou normal), du patient, du scan et de l'annotation.</li>
+</ul>
+</blockquote>
+<ol start="16">
+<li>Quelle est la signification de l'acronyme &quot;TRPMLN&quot; dans le contexte de ce script?</li>
+</ol>
+<blockquote>
+<p><strong>Quelle est la signification de l'acronyme &quot;TRPMLN&quot; dans le contexte de ce script?</strong></p>
+<ul>
+<li>L'acronyme &quot;TRPMLN&quot; n'est pas expliqué dans le script, mais il semble être utilisé comme un nom de jeu de données spécifique pour les nodules pulmonaires.</li>
+</ul>
+</blockquote>
+<ol start="17">
+<li>Quels sont les arguments en ligne de commande acceptés par le script?</li>
+</ol>
+<blockquote>
+<p><strong>Quels sont les arguments en ligne de commande acceptés par le script?</strong></p>
+<ul>
+<li>Le script accepte les arguments en ligne de commande suivants : &quot;-d&quot; pour spécifier le chemin du jeu de données LIDC-IDRI, &quot;-r&quot; pour spécifier le chemin du répertoire de sortie des ROI, et &quot;-c&quot; pour spécifier le chemin du fichier CSV de sortie.</li>
+</ul>
+</blockquote>
+<ol start="18">
+<li>Comment le script gère-t-il les erreurs lors de la conversion des scans en volumes?</li>
+</ol>
+<blockquote>
+<p><strong>Comment le script gère-t-il les erreurs lors de la conversion des scans en volumes?</strong></p>
+<ul>
+<li>Le script gère les erreurs lors de la conversion des scans en volumes en affichant un avertissement (warning) en cas d'erreur, mais il continue le traitement pour les autres nodules.</li>
+</ul>
+</blockquote>
+<ol start="19">
+<li>Quelles informations sont stockées dans le fichier de configuration &quot;.pylidcrc&quot; généré par le script?</li>
+</ol>
+<blockquote>
+<p><strong>Quelles informations sont stockées dans le fichier de configuration &quot;.pylidcrc&quot; généré par le script?</strong></p>
+<ul>
+<li>Le fichier de configuration &quot;.pylidcrc&quot; stocke le chemin du jeu de données LIDC-IDRI pour que la bibliothèque pylidc puisse y accéder.</li>
+</ul>
+</blockquote>
+<ol start="20">
+<li>Quel est le type de données principal utilisé pour stocker les informations extraites des scans?
+N'oubliez pas que ces questions sont basées uniquement sur le contenu du script Python lui-même. Pour formuler des questions plus spécifiques, des détails supplémentaires sur le rapport sur la détection et la classification des nodules pulmonaires sont nécessaires.</li>
+</ol>
+<blockquote>
+<p><strong>Quel est le type de données principal utilisé pour stocker les informations extraites des scans?</strong></p>
+<ul>
+<li>Les informations extraites des scans sont principalement stockées dans des structures de données sous forme de dictionnaires et de listes dans le script Python.</li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="s3-sebihi-dosimetrie-en-medcine-nucleaire-47p.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="./theme/tabbed-code-blocks.js"></script>
+        <script src="./theme/highlight.css"></script>
+
+
+    </div>
+    </body>
+</html>
